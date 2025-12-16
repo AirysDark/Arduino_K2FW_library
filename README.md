@@ -1,36 +1,23 @@
-Arduino_K2FW_library
+# Arduino_K2FW_library
 
 > Device Firmware Blueprint Database → Static Arduino/ESP32 Library
 
 ---
 
-Table of Contents
-
-Overview
-
-Pipeline Summary
-
-Folder Layout
-
-Blueprint JSON Files
-
-Arduino Library Consumption
-
-DeviceBlueprintLib (v1.1.0)
-
-Why This Design
-
-Supported Use Cases
-
-Safety Model
-
-Regeneration
-
-License & Ethics
-
-Status
-
-Documentation Index
+## Table of Contents
+- [Overview](#overview)
+- [Pipeline Summary](#pipeline-summary)
+- [Folder Layout](#folder-layout)
+- [Blueprint JSON Files](#blueprint-json-files)
+- [Arduino Library Consumption](#arduino-library-consumption)
+- [DeviceBlueprintLib (v1.1.0)](#deviceblueprintlib-v110)
+- [Why This Design](#why-this-design)
+- [Supported Use Cases](#supported-use-cases)
+- [Safety Model](#safety-model)
+- [Regeneration](#regeneration)
+- [License & Ethics](#license--ethics)
+- [Status](#status)
+- [Documentation Index](#documentation-index)
 
 ---
 
@@ -389,20 +376,19 @@ Status
 ✔ No runtime parsing
 ✔ Cross-device ready
 
+
+📘 Start here:
+- [Database Specification](read/README.db.md)
+- [Arduino Library API](read/README.lib.md)
+
 ---
 
-Documentation Index
+## Documentation Index
 
-📘 Database Specification
-
-📗 Arduino Library API
-
-📂 Blueprint JSON Reference
-
-🔧 Tools & Pipeline
-
-🔒 Security Model
-
-❓ FAQ
-
-🤝 Contributing
+- 📘 [Database Specification](read/README.db.md)
+- 📗 [Arduino Library API](read/README.lib.md)
+- 📂 [Blueprint JSON Reference](read/README.blueprint.md)
+- 🔧 [Tools & Pipeline](read/README.tools.md)
+- 🔒 [Security Model](read/SECURITY.md)
+- ❓ [FAQ](read/FAQ.md)
+- 🤝 [Contributing](read/CONTRIBUTING.md)
