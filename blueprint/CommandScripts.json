@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "dump_root": "C:\\Users\\AirysDark\\Documents\\GitHub\\Arduino_K2FW_library\\libk2"
+  },
+  "commands": {
+    "CMD_UBOOT_RESET": {
+      "context": "uboot",
+      "script": "reset"
+    },
+    "CMD_UBOOT_BOOT": {
+      "context": "uboot",
+      "script": "boot"
+    },
+    "CMD_UBOOT_PRINTENV": {
+      "context": "uboot",
+      "script": "printenv"
+    },
+    "CMD_LINUX_REBOOT": {
+      "context": "linux",
+      "script": "reboot"
+    },
+    "CMD_LINUX_JOURNALCTL": {
+      "context": "linux",
+      "script": "journalctl"
+    },
+    "CMD_LINUX_SYSTEMCTL": {
+      "context": "linux",
+      "script": "systemctl"
+    },
+    "CMD_LINUX_POWEROFF": {
+      "context": "linux",
+      "script": "poweroff"
+    },
+    "CMD_LINUX_DMESG": {
+      "context": "linux",
+      "script": "dmesg"
+    }
+  }
+}

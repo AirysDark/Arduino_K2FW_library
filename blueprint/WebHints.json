@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "dump_root": "C:\\Users\\AirysDark\\Documents\\GitHub\\Arduino_K2FW_library\\libk2",
+    "files": [
+      "/usr/share/fluidd/assets/WebrtcCamerastreamerCamera-UVgwGvJo.js",
+      "/usr/share/fluidd/assets/WebrtcGo2RtcCamera-B1wPuAwZ.js",
+      "/usr/share/fluidd/assets/WebrtcMediamtxCamera-qdwXPU9i.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/sw.js",
+      "/mnt/UDISK/printer_data/www/Mainsail/sw.js",
+      "/mnt/UDISK/printer_data/www/Mainsail/workbox-726ab1ca.js",
+      "/mnt/UDISK/printer_data/www/ui2/index.html",
+      "/mnt/UDISK/printer_data/www/Mainsail/assets/default.fragment-BXgZb35j.js",
+      "/mnt/UDISK/printer_data/www/Mainsail/assets/Heightmap-2SacNdhQ.js",
+      "/mnt/UDISK/printer_data/www/Mainsail/assets/Hlsstreamer-FeS7IboX.js",
+      "/mnt/UDISK/printer_data/www/Mainsail/assets/index-DeuWg9LT.js",
+      "/mnt/UDISK/printer_data/www/Mainsail/assets/JanusStreamer-egaZuvb9.js",
+      "/mnt/UDISK/printer_data/www/Mainsail/assets/JMuxerStream-By5pVOUe.js",
+      "/mnt/UDISK/printer_data/www/Mainsail/assets/Mjpegstreamer-EsL3EdeE.js",
+      "/mnt/UDISK/printer_data/www/Mainsail/assets/Viewer-CMwDBhPk.js",
+      "/mnt/UDISK/printer_data/www/Mainsail/assets/WebrtcCameraStreamer-DSfC5DLi.js",
+      "/mnt/UDISK/printer_data/www/Mainsail/assets/WebrtcGo2rtc-CkJ1mqcL.js",
+      "/mnt/UDISK/printer_data/www/Mainsail/assets/WebrtcMediaMTX-Bfew7fZW.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/de-Cc5YWWM5.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/fr-DdZPTIzT.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/HlsstreamCamera-DaF3HSZE.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/hu-D-XD2I6k.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/index-BGk7wtgE.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/mjpegStream.worker-LO74F1Jz.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/pl-gGl3GSHY.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/ru-DN1Usw9F.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/sandboxedEval.worker-DvyQbFXo.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/setupMonaco.features-bTxsI65e.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/sl-BtIc91gE.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/ta-k3Xy7e9Z.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/tr-D52hzhIv.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/uk-Cu9oUr6e.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/vue-echarts-chunk-C2_vtQTI.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/WebrtcCamerastreamerCamera-Coqj3Ohx.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/WebrtcGo2RtcCamera-VbzmcB_J.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/WebrtcMediamtxCamera-Dm0yQWk0.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/zh-CN-DedNPp_B.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/monacoeditorwork/css.worker.bundle.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/monacoeditorwork/editor.worker.bundle.js",
+      "/mnt/UDISK/printer_data/www/Fluidd/monacoeditorwork/json.worker.bundle.js"
+    ]
+  },
+  "web": {
+    "WEB_MACHINE_QUERY_UNASSIGNED_CANBUS_UUIDS": {
+      "path": "/machine/#query-unassigned-canbus-uuids",
+      "id": 1
+    },
+    "WEB_MACHINE_PERIPHERALS_CANBUS_INTERFACE_": {
+      "path": "/machine/peripherals/canbus?interface=",
+      "id": 2
+    },
+    "WEB_MACHINE_PERIPHERALS_SERIAL": {
+      "path": "/machine/peripherals/serial",
+      "id": 3
+    },
+    "WEB_MACHINE_PERIPHERALS_USB": {
+      "path": "/machine/peripherals/usb",
+      "id": 4
+    },
+    "WEB_MACHINE_PERIPHERALS_VIDEO": {
+      "path": "/machine/peripherals/video",
+      "id": 5
+    },
+    "WEB_PRINTER_GCODE_SCRIPT": {
+      "path": "/printer/gcode/script",
+      "id": 6
+    },
+    "WEB_PRINTER_OBJECTS_QUERY": {
+      "path": "/printer/objects/query",
+      "id": 7
+    },
+    "WEB_PRINTER_PRINT_CANCEL": {
+      "path": "/printer/print/cancel",
+      "id": 8
+    },
+    "WEB_PRINTER_PRINT_PAUSE": {
+      "path": "/printer/print/pause",
+      "id": 9
+    },
+    "WEB_PRINTER_PRINT_START": {
+      "path": "/printer/print/start",
+      "id": 10
+    },
+    "WEB_SERVER_C_FOLDER_FILE_TXT": {
+      "path": "/server/c$/folder/file.txt",
+      "id": 11
+    },
+    "WEB_SERVER_DATABASE_ITEM": {
+      "path": "/server/database/item",
+      "id": 12
+    },
+    "WEB_SERVER_DATABASE_ITEM_NAMESPACE_R_KEY_E_T_SERVERFILESUPLOADPO": {
+      "path": "/server/database/item?namespace=${r}&key=${e}`,t)},serverFilesUploadPost(r,e,t,s,n){const",
+      "id": 13
+    },
+    "WEB_SERVER_DATABASE_ITEM_NAMESPACE_R_E_SERVERDATABASEITEMPOST_R_": {
+      "path": "/server/database/item?namespace=${r}`,e)},serverDatabaseItemPost(r,e,t,s){return",
+      "id": 14
+    },
+    "WEB_SERVER_DATABASE_ITEM_NAMESPACE_MAINSAIL": {
+      "path": "/server/database/item?namespace=mainsail",
+      "id": 15
+    },
+    "WEB_SERVER_DATABASE_LIST": {
+      "path": "/server/database/list",
+      "id": 16
+    },
+    "WEB_SERVER_FILES_N_DATE_T_DATE_NOW_ASYNC": {
+      "path": "/server/files/${n}?date=${t||Date.now()}`}async",
+      "id": 17
+    },
+    "WEB_SERVER_FILES_THIS_PATHFILENAME_GET": {
+      "path": "/server/files/${this.pathFilename}`}get",
+      "id": 18
+    },
+    "WEB_SERVER_FILES_THIS_PATH_I_JSE_N_A_RENDERER_LINK_L_RETURN": {
+      "path": "/server/files/${this.path}/`,i=Jse(n),a={renderer:{link(...l){return",
+      "id": 19
+    },
+    "WEB_SERVER_FILES_T_DATE_DATE_NOW_E_CS_FOR_LET": {
+      "path": "/server/files/${t}?date=${Date.now()}`,e)}},cs=[];for(let",
+      "id": 20
+    },
+    "WEB_SERVER_FILES_GCODES": {
+      "path": "/server/files/gcodes/",
+      "id": 21
+    },
+    "WEB_SERVER_FILES_KLIPPY_LOG": {
+      "path": "/server/files/klippy.log",
+      "id": 22
+    },
+    "WEB_SERVER_FILES_LIST_ROOT_GCODES": {
+      "path": "/server/files/list?root=gcodes",
+      "id": 23
+    },
+    "WEB_SERVER_FILES_MOONRAKER_LOG": {
+      "path": "/server/files/moonraker.log",
+      "id": 24
+    },
+    "WEB_SERVER_FILES_UPLOAD": {
+      "path": "/server/files/upload",
+      "id": 25
+    },
+    "WEB_SERVER_INFO": {
+      "path": "/server/info",
+      "id": 26
+    }
+  }
+}

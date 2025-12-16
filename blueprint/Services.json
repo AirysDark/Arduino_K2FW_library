@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "dump_root": "C:\\Users\\AirysDark\\Documents\\GitHub\\Arduino_K2FW_library\\libk2"
+  },
+  "services": {
+    "SVC_FLUIDD_UDISK": {
+      "name": "fluidd_udisk",
+      "path": "/upper/etc/init.d/fluidd_udisk",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_ADBD": {
+      "name": "adbd",
+      "path": "/rom/etc/init.d/adbd",
+      "ports": [],
+      "urls": [],
+      "exec": [
+        "/bin/setusbconfig adb"
+      ]
+    },
+    "SVC_APP": {
+      "name": "app",
+      "path": "/rom/etc/init.d/app",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_BOARD_INIT": {
+      "name": "board_init",
+      "path": "/rom/etc/init.d/board_init",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_BOOT": {
+      "name": "boot",
+      "path": "/rom/etc/init.d/boot",
+      "ports": [],
+      "urls": [],
+      "exec": [
+        "/usr/sbin/fsck.ext4 -y /dev/by-name/app &>/dev/null",
+        "/bin/mount /dev/by-name/app /mnt/app",
+        "/usr/sbin/fsck.ext4 -y /dev/by-name/$first_app &> /dev/null",
+        "/bin/mount -t ext4 /dev/by-name/$first_app /mnt/app && {",
+        "/usr/sbin/fsck.ext4 -y /dev/by-name/$second_app &> /dev/null",
+        "/bin/mount -t ext4 /dev/by-name/$second_app /mnt/app && {",
+        "/usr/bin/clear_sn_mac.sh stress_test 0 && sync",
+        "/sbin/kmodloader",
+        "/bin/config_generate",
+        "/sbin/reload_config"
+      ]
+    },
+    "SVC_CRON": {
+      "name": "cron",
+      "path": "/rom/etc/init.d/cron",
+      "ports": [],
+      "urls": [],
+      "exec": [
+        "/sbin/validate_data uinteger \"${loglevel}\" 2>/dev/null"
+      ]
+    },
+    "SVC_DBUS": {
+      "name": "dbus",
+      "path": "/rom/etc/init.d/dbus",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_DEVICE_MANAGER": {
+      "name": "device_manager",
+      "path": "/rom/etc/init.d/device_manager",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_DONE": {
+      "name": "done",
+      "path": "/rom/etc/init.d/done",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_DROPBEAR": {
+      "name": "dropbear",
+      "path": "/rom/etc/init.d/dropbear",
+      "ports": [
+        22
+      ],
+      "urls": [],
+      "exec": [
+        "/usr/bin/dropbearkey \"$@\" 0<&- 1>&- 2>&-"
+      ]
+    },
+    "SVC_FSTAB": {
+      "name": "fstab",
+      "path": "/rom/etc/init.d/fstab",
+      "ports": [],
+      "urls": [],
+      "exec": [
+        "/sbin/block mount",
+        "/sbin/block umount"
+      ]
+    },
+    "SVC_GPIO_SWITCH": {
+      "name": "gpio_switch",
+      "path": "/rom/etc/init.d/gpio_switch",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_HOSTNAME": {
+      "name": "hostname",
+      "path": "/rom/etc/init.d/hostname",
+      "ports": [],
+      "urls": [],
+      "exec": [
+        "/usr/bin/cmp -s /rom/etc/hostname /etc/hostname"
+      ]
+    },
+    "SVC_KLIPPER": {
+      "name": "klipper",
+      "path": "/rom/etc/init.d/klipper",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_KLIPPER_MCU": {
+      "name": "klipper_mcu",
+      "path": "/rom/etc/init.d/klipper_mcu",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_LED": {
+      "name": "led",
+      "path": "/rom/etc/init.d/led",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_LOG": {
+      "name": "log",
+      "path": "/rom/etc/init.d/log",
+      "ports": [
+        514
+      ],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_MCU_UPDATE": {
+      "name": "mcu_update",
+      "path": "/rom/etc/init.d/mcu_update",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_MDNS": {
+      "name": "mdns",
+      "path": "/rom/etc/init.d/mdns",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_MOONRAKER": {
+      "name": "moonraker",
+      "path": "/rom/etc/init.d/moonraker",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_NETWORK": {
+      "name": "network",
+      "path": "/rom/etc/init.d/network",
+      "ports": [],
+      "urls": [],
+      "exec": [
+        "/sbin/wifi reload_legacy",
+        "/sbin/wifi down"
+      ]
+    },
+    "SVC_NGINX": {
+      "name": "nginx",
+      "path": "/rom/etc/init.d/nginx",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_PLAY": {
+      "name": "play",
+      "path": "/rom/etc/init.d/play",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_REFRESH_DEVICE_STATUS": {
+      "name": "refresh_device_status",
+      "path": "/rom/etc/init.d/refresh_device_status",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_S99SWUPDATE_AUTORUN": {
+      "name": "S99swupdate_autorun",
+      "path": "/rom/etc/init.d/S99swupdate_autorun",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_SYSCTL": {
+      "name": "sysctl",
+      "path": "/rom/etc/init.d/sysctl",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_SYSFIXTIME": {
+      "name": "sysfixtime",
+      "path": "/rom/etc/init.d/sysfixtime",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_SYSNTPD": {
+      "name": "sysntpd",
+      "path": "/rom/etc/init.d/sysntpd",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_SYSTEM": {
+      "name": "system",
+      "path": "/rom/etc/init.d/system",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_TEE_SUPPLICANT": {
+      "name": "tee-supplicant",
+      "path": "/rom/etc/init.d/tee-supplicant",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_UMOUNT": {
+      "name": "umount",
+      "path": "/rom/etc/init.d/umount",
+      "ports": [],
+      "urls": [],
+      "exec": [
+        "/bin/umount -a -d -r"
+      ]
+    },
+    "SVC_WEBRTC": {
+      "name": "webrtc",
+      "path": "/rom/etc/init.d/webrtc",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    },
+    "SVC_WIPE_DATA": {
+      "name": "wipe_data",
+      "path": "/rom/etc/init.d/wipe_data",
+      "ports": [],
+      "urls": [],
+      "exec": []
+    }
+  },
+  "evidence": {
+    "SVC_FLUIDD_UDISK": "/etc/init.d/fluidd_udisk",
+    "SVC_ADBD": "/etc/init.d/adbd",
+    "SVC_APP": "/etc/init.d/app",
+    "SVC_BOARD_INIT": "/etc/init.d/board_init",
+    "SVC_BOOT": "/etc/init.d/boot",
+    "SVC_CRON": "/etc/init.d/cron",
+    "SVC_DBUS": "/etc/init.d/dbus",
+    "SVC_DEVICE_MANAGER": "/etc/init.d/device_manager",
+    "SVC_DONE": "/etc/init.d/done",
+    "SVC_DROPBEAR": "/etc/init.d/dropbear",
+    "SVC_FSTAB": "/etc/init.d/fstab",
+    "SVC_GPIO_SWITCH": "/etc/init.d/gpio_switch",
+    "SVC_HOSTNAME": "/etc/init.d/hostname",
+    "SVC_KLIPPER": "/etc/init.d/klipper",
+    "SVC_KLIPPER_MCU": "/etc/init.d/klipper_mcu",
+    "SVC_LED": "/etc/init.d/led",
+    "SVC_LOG": "/etc/init.d/log",
+    "SVC_MCU_UPDATE": "/etc/init.d/mcu_update",
+    "SVC_MDNS": "/etc/init.d/mdns",
+    "SVC_MOONRAKER": "/etc/init.d/moonraker",
+    "SVC_NETWORK": "/etc/init.d/network",
+    "SVC_NGINX": "/etc/init.d/nginx",
+    "SVC_PLAY": "/etc/init.d/play",
+    "SVC_REFRESH_DEVICE_STATUS": "/etc/init.d/refresh_device_status",
+    "SVC_S99SWUPDATE_AUTORUN": "/etc/init.d/S99swupdate_autorun",
+    "SVC_SYSCTL": "/etc/init.d/sysctl",
+    "SVC_SYSFIXTIME": "/etc/init.d/sysfixtime",
+    "SVC_SYSNTPD": "/etc/init.d/sysntpd",
+    "SVC_SYSTEM": "/etc/init.d/system",
+    "SVC_TEE_SUPPLICANT": "/etc/init.d/tee-supplicant",
+    "SVC_UMOUNT": "/etc/init.d/umount",
+    "SVC_WEBRTC": "/etc/init.d/webrtc",
+    "SVC_WIPE_DATA": "/etc/init.d/wipe_data"
+  }
+}
