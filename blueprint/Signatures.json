@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "dump_root": "C:\\Users\\AirysDark\\Documents\\GitHub\\Arduino_K2FW_library\\libk2"
+  },
+  "signatures": {
+    "SIG_WATCHDOG": {
+      "name": "WATCHDOG",
+      "pattern": "watchdog|wdt|hung task",
+      "severity": "warn",
+      "suggest": []
+    },
+    "SIG_OOM": {
+      "name": "OOM",
+      "pattern": "Out of memory|oom-killer",
+      "severity": "warn",
+      "suggest": []
+    },
+    "SIG_MOTOR_CHECK": {
+      "name": "MOTOR_CHECK",
+      "pattern": "MOTOR[_ ]CHECK|motor check",
+      "severity": "warn",
+      "suggest": [
+        "Check homing/endstops/probe",
+        "Review motion limits/config"
+      ]
+    }
+  },
+  "evidence": {
+    "SIG_WATCHDOG": [
+      "rom/usr/share/klipper/gcodes/k1c/logo filament barrel base_hyper pla_54m.gcode",
+      "usr/share/klipper/gcodes/k1c/logo filament barrel base_hyper pla_54m.gcode"
+    ],
+    "SIG_OOM": [
+      "overlay/upper/usr/lib/python3.9/site-packages/pip/_vendor/rich/logging.py",
+      "upper/usr/lib/python3.9/site-packages/pip/_vendor/rich/logging.py",
+      "usr/lib/python3.9/site-packages/pip/_vendor/rich/logging.py"
+    ],
+    "SIG_MOTOR_CHECK": [
+      "mnt/udisk/printer_data/logs/klippy.log",
+      "mnt/udisk/printer_data/logs/klippy.log.2020-01-01",
+      "mnt/udisk/printer_data/logs/moonraker.log"
+    ]
+  }
+}
