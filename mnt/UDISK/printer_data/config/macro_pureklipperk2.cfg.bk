@@ -1,0 +1,236 @@
+############################################################
+# Pure Klipper Macros — Creality K2 Combo (Safe Pack)
+# - No STATUS
+# - No M117 required
+# - Safe coordinates for your limits
+# - Bed mesh uses mesh_min/max (5..255)
+############################################################
+
+
+[gcode_macro _MSG]
+description: Safe message (console only)
+gcode:
+  {% set t = params.T|default('')|string %}
+  {action_respond_info(t)}
+
+[gcode_macro _CLIENT]
+description: Central safe settings (edit here only)
+variable_park_x: 250.0
+variable_park_y: 285.0
+variable_park_z_lift: 10.0
+variable_retract: 1.2
+variable_unretract: 1.2
+variable_retract_speed: 35.0
+variable_unretract_speed: 25.0
+variable_move_speed: 240.0         # mm/s travel for parking moves (Klipper uses mm/min in G1, we convert)
+variable_z_speed: 10.0             # mm/s Z moves (keep <= your max_z_velocity 5 if your printer enforces it)
+variable_prime_line_y: 5.0
+variable_prime_line_x0: 10.0
+variable_prime_line_x1: 140.0
+gcode:
+  ; settings-only macro
+
+[gcode_macro _SAFE_ZHOP]
+description: Lift Z by hop amount if possible
+gcode:
+  {% set hop = params.HOP|default(printer['gcode_macro _CLIENT'].park_z_lift)|float %}
+  {% if 'z' in printer.toolhead.homed_axes %}
+    {% set z_now = printer.toolhead.position.z|float %}
+    {% set z_max = printer.toolhead.axis_maximum.z|float %}
+    {% set target = z_now + hop %}
+    {% if target > (z_max - 1.0) %}
+      {% set target = z_max - 1.0 %}
+    {% endif %}
+    {% if target > z_now %}
+      {% set dz = target - z_now %}
+      G91
+      G1 Z{dz} F{(printer['gcode_macro _CLIENT'].z_speed*60.0)|int}
+      G90
+    {% endif %}
+  {% endif %}
+
+[gcode_macro PARK]
+description: Park toolhead safely (K2 Combo)
+gcode:
+  {% set cx = printer['gcode_macro _CLIENT'].park_x|float %}
+  {% set cy = printer['gcode_macro _CLIENT'].park_y|float %}
+  _MSG T="PARK: moving to safe park"
+  _SAFE_ZHOP
+  {% if 'x' in printer.toolhead.homed_axes and 'y' in printer.toolhead.homed_axes %}
+    G90
+    G1 X{cx} Y{cy} F{(printer['gcode_macro _CLIENT'].move_speed*60.0)|int}
+  {% endif %}
+
+[gcode_macro HOME_ALL]
+description: Safe homing wrapper
+gcode:
+  _MSG T="HOME_ALL: homing XYZ"
+  G90
+  G28
+
+# Optional: make G32 do a full “prep + level” sequence (common Klipper convention)
+[gcode_macro G32]
+description: Home + level + mesh (auto-detect)
+gcode:
+  _MSG T="G32: home + level (auto-detect) + mesh"
+  HOME_ALL
+  ; If your config has z_tilt:
+  {% if printer.configfile.settings.z_tilt is defined %}
+    _MSG T="G32: running Z_TILT_ADJUST"
+    Z_TILT_ADJUST
+    G28 Z
+  {% endif %}
+  ; If your config has quad_gantry_level:
+  {% if printer.configfile.settings.quad_gantry_level is defined %}
+    _MSG T="G32: running QUAD_GANTRY_LEVEL"
+    QUAD_GANTRY_LEVEL
+    G28 Z
+  {% endif %}
+  ; Bed mesh (you DO have mesh_min/max)
+  {% if printer.configfile.settings.bed_mesh is defined %}
+    BED_MESH_CLEAR
+    _MSG T="G32: BED_MESH_CALIBRATE"
+    BED_MESH_CALIBRATE
+  {% endif %}
+  PARK
+
+
+[gcode_macro _PRIME_LINE]
+description: Safe prime line along Y=5 (inside mesh area)
+gcode:
+  {% set y  = printer['gcode_macro _CLIENT'].prime_line_y|float %}
+  {% set x0 = printer['gcode_macro _CLIENT'].prime_line_x0|float %}
+  {% set x1 = printer['gcode_macro _CLIENT'].prime_line_x1|float %}
+  G90
+  G92 E0
+  G1 X{x0} Y{y} Z0.30 F{(120*60)}
+  G1 X{x1} Y{y} E8.0 F{(25*60)}
+  G1 X{x1} Y{(y+2.0)} E1.0 F{(25*60)}
+  G92 E0
+
+############################################################
+# START / END / PAUSE / RESUME / CANCEL
+############################################################
+
+[gcode_macro START_PRINT]
+description: Start print (safe, pure Klipper)
+gcode:
+  {% set bed = params.BED|default(0)|float %}
+  {% set hotend = params.HOTEND|default(0)|float %}
+  _MSG T="START_PRINT: begin"
+
+  ; Heat (non-blocking first)
+  {% if bed > 0 %}
+    M140 S{bed}
+  {% endif %}
+  {% if hotend > 0 %}
+    M104 S{hotend}
+  {% endif %}
+
+  HOME_ALL
+
+  ; If you want automatic mesh each print, enable this:
+  {% if printer.configfile.settings.bed_mesh is defined %}
+    BED_MESH_CLEAR
+    ; Comment this out if you prefer a saved mesh:
+    ; BED_MESH_PROFILE LOAD=default
+  {% endif %}
+
+  ; Wait temps (blocking)
+  {% if bed > 0 %}
+    M190 S{bed}
+  {% endif %}
+  {% if hotend > 0 %}
+    M109 S{hotend}
+  {% endif %}
+
+  _PRIME_LINE
+  _MSG T="START_PRINT: ready"
+
+[gcode_macro END_PRINT]
+description: End print (safe shutdown + park)
+gcode:
+  _MSG T="END_PRINT: finishing"
+  M400
+  ; retract a touch
+  G92 E0
+  G1 E-1.0 F{(35*60)}
+  _SAFE_ZHOP
+  PARK
+  ; heaters off
+  M104 S0
+  M140 S0
+  ; fan off
+  M106 S0
+  ; disable steppers (optional)
+  M84
+  _MSG T="END_PRINT: done"
+
+[pause_resume]
+
+[gcode_macro PAUSE]
+description: Pause (safe park + retract)
+rename_existing: PAUSE_BASE
+gcode:
+  _MSG T="PAUSE: parking"
+  PAUSE_BASE
+  {% set r = printer['gcode_macro _CLIENT'].retract|float %}
+  {% set rs = printer['gcode_macro _CLIENT'].retract_speed|float %}
+  G92 E0
+  G1 E-{r} F{(rs*60.0)|int}
+  _SAFE_ZHOP
+  PARK 
+
+[gcode_macro RESUME]
+description: Resume (unretract + continue)
+rename_existing: RESUME_BASE
+gcode:
+  _MSG T="RESUME: returning"
+  {% set ur = printer['gcode_macro _CLIENT'].unretract|float %}
+  {% set urs = printer['gcode_macro _CLIENT'].unretract_speed|float %}
+  G92 E0
+  G1 E{ur} F{(urs*60.0)|int}
+  RESUME_BASE
+
+[gcode_macro CANCEL_PRINT]
+description: Cancel print (safe + heaters off)
+rename_existing: CANCEL_PRINT_BASE
+gcode:
+  _MSG T="CANCEL_PRINT: stopping"
+  M400
+  _SAFE_ZHOP
+  PARK
+  ; turn off heaters/fans
+  M104 S0
+  M140 S0
+  M106 S0
+  CANCEL_PRINT_BASE
+  M84
+  _MSG T="CANCEL_PRINT: done"
+
+############################################################
+# Convenience macros
+############################################################
+
+[gcode_macro LEVEL_BED]
+description: Run leveling sequence safely (uses auto-detect like G32)
+gcode:
+  G32
+
+[gcode_macro LOAD_FILAMENT]
+description: Simple filament load (hotend must be hot)
+gcode:
+  _MSG T="LOAD_FILAMENT"
+  G92 E0
+  G1 E40 F{(5*60)}
+  G1 E20 F{(2*60)}
+  G92 E0
+
+[gcode_macro UNLOAD_FILAMENT]
+description: Simple filament unload (hotend must be hot)
+gcode:
+  _MSG T="UNLOAD_FILAMENT"
+  G92 E0
+  G1 E10 F{(5*60)}
+  G1 E-60 F{(10*60)}
+  G92 E0

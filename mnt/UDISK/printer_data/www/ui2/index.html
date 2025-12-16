@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sonic-Stream – Fluidd Skin (UI Only)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #11131a;
+      --bg-alt: #171924;
+      --bg-card: #1f2230;
+      --accent: #3ea3ff;
+      --accent-soft: rgba(62, 163, 255, 0.2);
+      --text: #e6e8f2;
+      --text-muted: #9aa0bd;
+      --border: #2b3042;
+      --danger: #ff5370;
+      --success: #4fd07b;
+      --warning: #ffb347;
+      --radius-lg: 14px;
+      --radius-sm: 6px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #23263a 0, #0b0d13 45%, #05060b 100%);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      overflow: hidden;
+    }
+    .layout { display: flex; width: 100%; height: 100%; }
+    .sidebar {
+      width: 68px;
+      background: linear-gradient(180deg, #131521 0%, #090a10 100%);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 14px 10px;
+      gap: 16px;
+    }
+    .sidebar-logo {
+      width: 36px; height: 36px; border-radius: 12px;
+      background: radial-gradient(circle at 30% 0, #6ee7ff, #2563eb);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-weight: 700; font-size: 14px;
+    }
+    .sidebar-nav { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+    .sidebar-btn {
+      width: 42px; height: 42px; border-radius: 16px; border: 1px solid transparent;
+      background: transparent; color: var(--text-muted);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; cursor: pointer;
+    }
+    .sidebar-btn.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+    .sidebar-bottom { margin-top: auto; display: flex; flex-direction: column; gap: 10px; align-items: center; }
+    .status-dot {
+      width: 10px; height: 10px; border-radius: 999px;
+      background: var(--success);
+      box-shadow: 0 0 12px rgba(79, 208, 123, 0.8);
+    }
+    .main { flex: 1; display: flex; flex-direction: column; padding: 14px 18px; gap: 12px; overflow: hidden; }
+    .topbar { display: flex; align-items: center; gap: 16px; }
+    .topbar-title { display: flex; flex-direction: column; gap: 2px; }
+    .topbar-title h1 { font-size: 18px; font-weight: 600; }
+    .topbar-title span { font-size: 12px; color: var(--text-muted); }
+    .topbar-tabs { display: flex; gap: 6px; margin-left: 24px; flex-wrap: wrap; }
+    .topbar-tab {
+      padding: 6px 10px; border-radius: 999px; border: 1px solid transparent;
+      font-size: 12px; cursor: pointer; background: transparent;
+      color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px;
+    }
+    .topbar-tab span.dot { width: 6px; height: 6px; border-radius: 999px; background: var(--border); }
+    .topbar-tab.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+    .topbar-spacer { flex: 1; }
+    .chip {
+      font-size: 11px; padding: 4px 8px; border-radius: 999px;
+      background: rgba(15, 186, 119, 0.12);
+      color: var(--success); border: 1px solid rgba(79, 208, 123, 0.4);
+    }
+    .content {
+      flex: 1; display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 12px; overflow: hidden;
+    }
+    .page { display: none; }
+    .page.active { display: grid; }
+    .page-full { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); }
+    .card {
+      background: radial-gradient(circle at top left, #262a3e 0, #141724 55%);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 12px 14px; display: flex; flex-direction: column; min-height: 0;
+    }
+    .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+    .card-title { font-size: 13px; text-transform: uppercase; color: var(--text-muted); }
+    .badge-pill {
+      border-radius: 999px; padding: 4px 8px; background: rgba(15,23,42,0.8);
+      border: 1px solid var(--border); font-size: 11px; color: var(--text-muted);
+    }
+    .card-body { flex: 1; display: flex; flex-direction: column; gap: 10px; overflow: hidden; }
+    .printer-summary {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; font-size: 12px;
+    }
+    .stat { background: rgba(15, 23, 42, 0.9); border-radius: var(--radius-sm);
+      padding: 8px; border: 1px solid rgba(148, 163, 184, 0.12);
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .stat-label { color: var(--text-muted); font-size: 11px; }
+    .stat-value { font-weight: 600; font-size: 13px; }
+    .temp-row { display: flex; gap: 8px; }
+    .temp-chip {
+      flex: 1; background: rgba(15,23,42,0.95); border-radius: var(--radius-sm);
+      border: 1px solid rgba(148,163,184,0.25); padding: 8px;
+      display: flex; flex-direction: column; gap: 4px; font-size: 12px;
+    }
+    .temp-top { display: flex; justify-content: space-between; }
+    .temp-name { color: var(--text-muted); font-size: 11px; }
+    .temp-value { font-size: 14px; font-weight: 600; }
+    .temp-bar { margin-top: 4px; height: 4px; border-radius: 999px; background: #020617; overflow: hidden; }
+    .temp-bar-fill { height: 100%; background: linear-gradient(90deg,#22c55e,#f97316,#ef4444); width: 40%; }
+    .btn-row { margin-top: auto; display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn-outline {
+      border-radius: var(--radius-sm); border: 1px solid var(--border);
+      background: rgba(15,23,42,0.9); color: var(--text-muted);
+      padding: 5px 8px; font-size: 11px; cursor: pointer;
+    }
+    .btn-outline.-danger { border-color: rgba(239,68,68,0.7); color: var(--danger); }
+    .btn-outline.-primary { border-color: var(--accent); color: var(--accent); }
+    .console {
+      flex: 1; border-radius: var(--radius-sm);
+      background: #050712; padding: 8px; font-family: monospace;
+      font-size: 11px; color: #cbd5f5; border: 1px solid #1f2937; overflow: auto;
+    }
+    .console-line span.ts { color:#6b7280; margin-right:4px; }
+    .console-line span.cmd { color:#60a5fa; }
+    .console-line span.ok { color: var(--success); }
+    .console-line span.err { color: var(--danger); }
+    .console-input-row { margin-top: 6px; display:flex; gap:6px; }
+    .console-input {
+      flex:1; background:#020617; border-radius:var(--radius-sm);
+      border:1px solid #1e293b; padding:4px 6px; color:#e5e7eb;
+      font-size:11px; outline:none;
+    }
+    .btn-sm {
+      font-size:11px; padding:4px 8px; border-radius:var(--radius-sm);
+      border:1px solid var(--accent); background:linear-gradient(135deg,#1d4ed8,#0ea5e9);
+      color:white; cursor:pointer;
+    }
+    .field-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap:8px; font-size:12px; }
+    .field { display:flex; flex-direction:column; gap:4px; }
+    .field label { color:var(--text-muted); font-size:11px; }
+    .field input[type=number], .field input[type=text] {
+      border-radius:var(--radius-sm); border:1px solid var(--border);
+      background:rgba(15,23,42,0.95); color:var(--text); padding:4px 6px;
+      font-size:12px; outline:none; width:100%;
+    }
+    .table { width:100%; border-collapse:collapse; font-size:11px; color:var(--text-muted); }
+    .table th,.table td { padding:6px 4px; border-bottom:1px solid rgba(148,163,184,0.16); }
+    .hint { font-size:11px; color:var(--text-muted); margin-top:4px; }
+    .jog-grid {
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+      gap:4px;
+      margin-top:4px;
+    }
+    .jog-btn {
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: rgba(15,23,42,0.9);
+      color: var(--text-muted);
+      font-size: 11px;
+      padding: 4px 6px;
+      cursor: pointer;
+    }
+    .jog-btn.-center { opacity: 0.5; cursor: default; }
+    .api-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      border: 1px dashed rgba(148,163,184,0.35);
+      background: rgba(2,6,23,0.35);
+      padding: 8px;
+      border-radius: var(--radius-sm);
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-logo">SS</div>
+    <div class="sidebar-nav">
+      <button class="sidebar-btn active" data-nav="overview" title="Overview">🏠</button>
+      <button class="sidebar-btn" data-nav="console" title="Console">💻</button>
+      <button class="sidebar-btn" data-nav="jobs" title="Jobs">📂</button>
+      <button class="sidebar-btn" data-nav="settings" title="Settings">⚙️</button>
+    </div>
+    <div class="sidebar-bottom">
+      <div class="status-dot" id="status-dot"></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="topbar-title">
+        <h1 id="printer-name">Sonic-Stream</h1>
+        <span id="printer-subtitle">UI Only · No backend connected</span>
+      </div>
+      <div class="topbar-tabs">
+        <button class="topbar-tab active" data-page="overview"><span class="dot"></span> Overview</button>
+        <button class="topbar-tab" data-page="console"><span class="dot"></span> Console</button>
+        <button class="topbar-tab" data-page="jobs"><span class="dot"></span> Jobs</button>
+        <button class="topbar-tab" data-page="settings"><span class="dot"></span> Settings</button>
+      </div>
+      <div class="topbar-spacer"></div>
+      <span class="chip" id="chip-state">UI Only</span>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section class="content page active" id="page-overview">
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Printer Status</div>
+          <span class="badge-pill" id="badge-connection">Backend: UI only</span>
+        </div>
+        <div class="card-body">
+          <div class="printer-summary">
+            <div class="stat"><span class="stat-label">State</span><span class="stat-value" id="stat-state">Idle</span></div>
+            <div class="stat"><span class="stat-label">Progress</span><span class="stat-value" id="stat-progress">0%</span></div>
+            <div class="stat"><span class="stat-label">File</span><span class="stat-value" id="stat-file">–</span></div>
+            <div class="stat"><span class="stat-label">Backend</span><span class="stat-value" id="stat-backend">Not connected</span></div>
+          </div>
+
+          <div class="temp-row">
+            <div class="temp-chip">
+              <div class="temp-top"><span class="temp-name">Nozzle</span><span class="temp-value" id="temp-nozzle">--°C</span></div>
+              <div class="temp-bar"><div class="temp-bar-fill" id="temp-nozzle-bar" style="width:0%"></div></div>
+            </div>
+            <div class="temp-chip">
+              <div class="temp-top"><span class="temp-name">Bed</span><span class="temp-value" id="temp-bed">--°C</span></div>
+              <div class="temp-bar"><div class="temp-bar-fill" id="temp-bed-bar" style="width:0%"></div></div>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn-outline" data-action="pause">Pause Print</button>
+            <button class="btn-outline -danger" data-action="stop">Stop Print</button>
+          </div>
+
+          <div class="api-note">
+            This is <b>UI only</b>. Buttons just log actions to the console.
+            In Settings you can set an API base URL later (Moonraker / your ESP32 bridge).
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Movement & Controls</div>
+          <span class="badge-pill">UI only</span>
+        </div>
+        <div class="card-body">
+          <div class="field-grid">
+            <div class="field">
+              <label>XY Jog (10mm)</label>
+              <div class="jog-grid">
+                <button class="jog-btn" data-gcode="G91; G0 Y10 F6000; G90">Y+</button>
+                <button class="jog-btn -center" disabled>XY</button>
+                <button class="jog-btn" data-gcode="G91; G0 Y-10 F6000; G90">Y-</button>
+                <button class="jog-btn" data-gcode="G91; G0 X-10 F6000; G90">X-</button>
+                <button class="jog-btn" data-gcode="G91; G0 X10 F6000; G90">X+</button>
+                <button class="jog-btn -center" disabled></button>
+                <button class="jog-btn" data-gcode="G91; G0 Z10 F1200; G90">Z+</button>
+                <button class="jog-btn -center" disabled></button>
+                <button class="jog-btn" data-gcode="G91; G0 Z-10 F1200; G90">Z-</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Homing</label>
+              <div class="btn-row">
+                <button class="btn-outline -primary" data-gcode="G28">Home All</button>
+                <button class="btn-outline" data-gcode="G28 X">Home X</button>
+                <button class="btn-outline" data-gcode="G28 Y">Home Y</button>
+                <button class="btn-outline" data-gcode="G28 Z">Home Z</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Heaters</label>
+              <div class="btn-row">
+                <button class="btn-outline" data-gcode="M104 S215; M140 S60">Preheat PLA</button>
+                <button class="btn-outline" data-gcode="M104 S0; M140 S0">Cooldown</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="fan-speed">Fan (%)</label>
+              <input id="fan-speed" type="number" min="0" max="100" value="100" />
+              <div class="btn-row" style="margin-top:4px;">
+                <button class="btn-outline" data-fan="0">Fan 0%</button>
+                <button class="btn-outline" data-fan="50">Fan 50%</button>
+                <button class="btn-outline" data-fan="100">Fan 100%</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Console</div>
+          <span class="badge-pill">UI only</span>
+        </div>
+        <div class="card-body">
+          <div class="console" id="console"></div>
+          <div class="console-input-row">
+            <input id="console-input" class="console-input" placeholder="Type G-code or a note…" />
+            <button class="btn-sm" id="console-send">Send</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- CONSOLE FULL -->
+    <section class="content page page-full" id="page-console">
+      <article class="card" style="grid-column: 1 / -1;">
+        <div class="card-header">
+          <div class="card-title">Console</div>
+          <span class="badge-pill">UI only</span>
+        </div>
+        <div class="card-body">
+          <div class="console" id="console-big"></div>
+          <div class="console-input-row">
+            <input id="console-input-big" class="console-input" placeholder="Type G-code or a note…" />
+            <button class="btn-sm" id="console-send-big">Send</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- JOBS -->
+    <section class="content page page-full" id="page-jobs">
+      <article class="card" style="grid-column: 1 / -1;">
+        <div class="card-header">
+          <div class="card-title">Jobs</div>
+          <span class="badge-pill" id="badge-jobs">0 jobs</span>
+        </div>
+        <div class="card-body">
+          <table class="table" id="jobs-table">
+            <thead>
+              <tr>
+                <th align="left">File</th>
+                <th align="left">Profile</th>
+                <th align="left">Est. time</th>
+                <th align="left">State</th>
+                <th align="left">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td colspan="5">No jobs (UI only).</td></tr>
+            </tbody>
+          </table>
+          <div class="hint">When you hook a backend later, this will list files/prints.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="content page page-full" id="page-settings">
+      <article class="card" style="grid-column: 1 / -1;">
+        <div class="card-header">
+          <div class="card-title">Settings</div>
+          <span class="badge-pill">Stored locally</span>
+        </div>
+        <div class="card-body">
+          <div class="field-grid">
+            <div class="field">
+              <label>UI Name</label>
+              <input id="set-ui-name" type="text" placeholder="Sonic-Stream" />
+            </div>
+            <div class="field">
+              <label>API Base URL (optional)</label>
+              <input id="set-api-base" type="text" placeholder="http://printer.local" />
+              <div class="hint">UI-only build doesn’t call the API. This is just saved for later.</div>
+            </div>
+          </div>
+          <div class="btn-row" style="margin-top: 8px;">
+            <button class="btn-outline -primary" id="btn-save-settings">Save Settings</button>
+            <button class="btn-outline" id="btn-reset-settings">Reset</button>
+          </div>
+          <div class="hint">Tip: open this file in any browser, or serve it from ESP32/SD as static HTML.</div>
+        </div>
+      </article>
+    </section>
+
+  </main>
+</div>
+
+\
+<script>
+  // Sonic-Stream UI (Moonraker-connected)
+  // - Top-right chip shows Online/Offline based on Moonraker connectivity
+  // - Sidebar dot also indicates status
+  // - Console / buttons send commands to Moonraker
+  //
+  // IMPORTANT (CORS):
+  // Best practice is to HOST this UI from Moonraker's web root:
+  //   <printer_data>/www/sonic-stream/index.html
+  // then open it via: http://<printer>/sonic-stream/
+  // If you open index.html as a local file, your browser may block API calls.
+
+  function ts() { return '[' + new Date().toTimeString().split(' ')[0] + ']'; }
+  function nowISO(){ return new Date().toISOString(); }
+
+  function appendConsole(target, text, type) {
+    const line = document.createElement('div');
+    line.className = 'console-line';
+    const spanTs = document.createElement('span');
+    spanTs.className = 'ts';
+    spanTs.textContent = ts() + ' ';
+    const spanText = document.createElement('span');
+    if (type) spanText.className = type;
+    spanText.textContent = text;
+    line.appendChild(spanTs);
+    line.appendChild(spanText);
+    target.appendChild(line);
+    target.scrollTop = target.scrollHeight;
+  }
+
+  // Tabs/pages
+  const pages = document.querySelectorAll('.page');
+  const topTabs = document.querySelectorAll('.topbar-tab');
+  const navBtns = document.querySelectorAll('.sidebar-btn[data-nav]');
+  function showPage(name) {
+    pages.forEach(p => p.classList.toggle('active', p.id === 'page-' + name));
+    topTabs.forEach(t => t.classList.toggle('active', t.dataset.page === name));
+    navBtns.forEach(b => b.classList.toggle('active', b.dataset.nav === name));
+  }
+  topTabs.forEach(btn => btn.addEventListener('click', () => showPage(btn.dataset.page)));
+  navBtns.forEach(btn => btn.addEventListener('click', () => showPage(btn.dataset.nav)));
+
+  // Elements
+  const consoleEl = document.getElementById('console');
+  const consoleBig = document.getElementById('console-big');
+  const consoleInput = document.getElementById('console-input');
+  const consoleInputBig = document.getElementById('console-input-big');
+  const consoleSend = document.getElementById('console-send');
+  const consoleSendBig = document.getElementById('console-send-big');
+
+  const statusDot = document.getElementById('status-dot');
+  const chipState = document.getElementById('chip-state');
+  const badgeConnection = document.getElementById('badge-connection');
+
+  const printerNameEl = document.getElementById('printer-name');
+  const printerSubtitleEl = document.getElementById('printer-subtitle');
+
+  const statState = document.getElementById('stat-state');
+  const statProgress = document.getElementById('stat-progress');
+  const statFile = document.getElementById('stat-file');
+  const statBackend = document.getElementById('stat-backend');
+
+  const tempNozzle = document.getElementById('temp-nozzle');
+  const tempBed = document.getElementById('temp-bed');
+  const tempNozzleBar = document.getElementById('temp-nozzle-bar');
+  const tempBedBar = document.getElementById('temp-bed-bar');
+
+  const jobsTableBody = document.getElementById('jobs-table').querySelector('tbody');
+  const badgeJobs = document.getElementById('badge-jobs');
+
+  // Settings (localStorage)
+  const KEY = 'sonic_stream_settings_v2_moonraker';
+  const uiName = document.getElementById('set-ui-name');
+  const apiBase = document.getElementById('set-api-base');
+  const btnSave = document.getElementById('btn-save-settings');
+  const btnReset = document.getElementById('btn-reset-settings');
+
+  let SETTINGS = { name: 'Sonic-Stream', apiBase: '', savedAt: null };
+
+  function loadSettings() {
+    let s = null;
+    try { s = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch(e) {}
+    s = s || { name: 'Sonic-Stream', apiBase: '', savedAt: null };
+    SETTINGS = s;
+
+    uiName.value = s.name || 'Sonic-Stream';
+    apiBase.value = s.apiBase || '';
+    printerNameEl.textContent = uiName.value;
+
+    // Show connection target in subtitle
+    const target = getApiBase();
+    printerSubtitleEl.textContent = target ? ('Moonraker: ' + target) : 'Moonraker: same host';
+  }
+
+  function saveSettings() {
+    const s = { name: uiName.value.trim() || 'Sonic-Stream', apiBase: apiBase.value.trim(), savedAt: nowISO() };
+    localStorage.setItem(KEY, JSON.stringify(s));
+    SETTINGS = s;
+    printerNameEl.textContent = s.name;
+
+    const target = getApiBase();
+    printerSubtitleEl.textContent = target ? ('Moonraker: ' + target) : 'Moonraker: same host';
+
+    logOk('Saved settings');
+  }
+
+  function resetSettings() {
+    localStorage.removeItem(KEY);
+    loadSettings();
+    logOk('Reset settings');
+  }
+
+  btnSave.addEventListener('click', saveSettings);
+  btnReset.addEventListener('click', resetSettings);
+
+  function getApiBase() {
+    // If empty, use same-origin (recommended when hosted from Moonraker's www/)
+    const v = (apiBase?.value || SETTINGS.apiBase || '').trim();
+    if (!v) return '';
+    // strip trailing slash
+    return v.replace(/\/+$/, '');
+  }
+
+  function apiUrl(path) {
+    const base = getApiBase();
+    if (!path.startsWith('/')) path = '/' + path;
+    return base ? (base + path) : path;
+  }
+
+  async function apiGet(path) {
+    const res = await fetch(apiUrl(path), { method: 'GET' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    return await res.json();
+  }
+
+  async function apiPost(path, bodyObj) {
+    const res = await fetch(apiUrl(path), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(bodyObj || {})
+    });
+    if (!res.ok) {
+      let t = '';
+      try { t = await res.text(); } catch(e) {}
+      throw new Error('HTTP ' + res.status + (t ? (': ' + t.slice(0,160)) : ''));
+    }
+    // Some endpoints return JSON, some return empty; handle both
+    const ct = res.headers.get('content-type') || '';
+    if (ct.includes('application/json')) return await res.json();
+    return { ok: true };
+  }
+
+  function logOk(msg) {
+    appendConsole(consoleEl, msg, 'ok');
+    appendConsole(consoleBig, msg, 'ok');
+  }
+  function logErr(msg) {
+    appendConsole(consoleEl, msg, 'err');
+    appendConsole(consoleBig, msg, 'err');
+  }
+  function logCmd(cmd) {
+    appendConsole(consoleEl, '> ' + cmd, 'cmd');
+    appendConsole(consoleBig, '> ' + cmd, 'cmd');
+  }
+
+  // Moonraker actions
+  async function sendGcode(script) {
+    const cmd = (script || '').trim();
+    if (!cmd) return;
+    logCmd(cmd);
+    // Moonraker: /printer/gcode/script { "script": "..." }
+    await apiPost('/printer/gcode/script', { script: cmd });
+    logOk('ok');
+  }
+
+  async function pausePrint() {
+    // Moonraker: /printer/print/pause {}
+    await apiPost('/printer/print/pause', {});
+    logOk('Paused');
+  }
+
+  async function cancelPrint() {
+    // Moonraker: /printer/print/cancel {}
+    await apiPost('/printer/print/cancel', {});
+    logOk('Canceled');
+  }
+
+  // UI Events
+  consoleSend.addEventListener('click', async () => {
+    const cmd = consoleInput.value.trim();
+    consoleInput.value = '';
+    try { await sendGcode(cmd); } catch (e) { logErr('Console error: ' + e.message); }
+  });
+
+  consoleSendBig.addEventListener('click', async () => {
+    const cmd = consoleInputBig.value.trim();
+    consoleInputBig.value = '';
+    try { await sendGcode(cmd); } catch (e) { logErr('Console error: ' + e.message); }
+  });
+
+  consoleInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); consoleSend.click(); }
+  });
+  consoleInputBig.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); consoleSendBig.click(); }
+  });
+
+  document.querySelectorAll('.btn-outline[data-action]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const action = btn.dataset.action;
+      try {
+        if (action === 'pause') await pausePrint();
+        else if (action === 'stop') await cancelPrint();
+        else logErr('Unknown action: ' + action);
+      } catch (e) {
+        logErr('Action error: ' + e.message);
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-gcode]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const code = btn.getAttribute('data-gcode');
+      try { await sendGcode(code); } catch (e) { logErr('G-code error: ' + e.message); }
+    });
+  });
+
+  document.querySelectorAll('[data-fan]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const val = parseInt(btn.getAttribute('data-fan'), 10) || 0;
+      const fanInput = document.getElementById('fan-speed');
+      if (fanInput) fanInput.value = val;
+      const cmd = 'M106 S' + Math.round(255 * (val / 100));
+      try { await sendGcode(cmd); } catch (e) { logErr('Fan error: ' + e.message); }
+    });
+  });
+
+  // Jobs/files list (optional): /server/files/list?root=gcodes
+  function renderJobs(files) {
+    jobsTableBody.innerHTML = '';
+    if (!files || files.length === 0) {
+      const tr = document.createElement('tr');
+      const td = document.createElement('td');
+      td.colSpan = 5;
+      td.textContent = 'No files.';
+      tr.appendChild(td);
+      jobsTableBody.appendChild(tr);
+      badgeJobs.textContent = '0 files';
+      return;
+    }
+
+    badgeJobs.textContent = files.length + ' files';
+
+    for (const f of files) {
+      const tr = document.createElement('tr');
+
+      const tdFile = document.createElement('td');
+      tdFile.textContent = f.path || f.filename || '(unknown)';
+      tr.appendChild(tdFile);
+
+      const tdProfile = document.createElement('td');
+      tdProfile.textContent = f.metadata?.slicer || f.metadata?.profile || '—';
+      tr.appendChild(tdProfile);
+
+      const tdTime = document.createElement('td');
+      const est = f.metadata?.estimated_time;
+      tdTime.textContent = (typeof est === 'number') ? (Math.round(est) + 's') : '—';
+      tr.appendChild(tdTime);
+
+      const tdState = document.createElement('td');
+      tdState.textContent = 'Ready';
+      tr.appendChild(tdState);
+
+      const tdAct = document.createElement('td');
+      const b = document.createElement('button');
+      b.className = 'btn-outline -primary';
+      b.textContent = 'Print';
+      b.style.padding = '4px 8px';
+      b.addEventListener('click', async () => {
+        // Moonraker: /printer/print/start {"filename":"..."}
+        try {
+          const filename = f.path || f.filename;
+          if (!filename) throw new Error('Missing filename');
+          await apiPost('/printer/print/start', { filename });
+          logOk('Started: ' + filename);
+        } catch (e) {
+          logErr('Start error: ' + e.message);
+        }
+      });
+      tdAct.appendChild(b);
+      tr.appendChild(tdAct);
+
+      jobsTableBody.appendChild(tr);
+    }
+  }
+
+  async function loadFiles() {
+    try {
+      const data = await apiGet('/server/files/list?root=gcodes');
+      // Moonraker returns { result: [...] } in many endpoints
+      const files = Array.isArray(data) ? data : (data.result || data.files || []);
+      renderJobs(files);
+    } catch (e) {
+      badgeJobs.textContent = 'files error';
+      // show one row with error
+      jobsTableBody.innerHTML = '';
+      const tr = document.createElement('tr');
+      const td = document.createElement('td');
+      td.colSpan = 5;
+      td.textContent = 'Files error: ' + e.message;
+      tr.appendChild(td);
+      jobsTableBody.appendChild(tr);
+    }
+  }
+
+  // Status polling
+  function setOnline(online, detail) {
+    if (online) {
+      chipState.textContent = 'Sonic-Stream Online';
+      chipState.style.color = 'var(--success)';
+      chipState.style.borderColor = 'rgba(79, 208, 123, 0.4)';
+      chipState.style.background = 'rgba(15, 186, 119, 0.12)';
+      statusDot.style.background = 'var(--success)';
+      statusDot.style.boxShadow = '0 0 12px rgba(79, 208, 123, 0.8)';
+      badgeConnection.textContent = 'Moonraker: Connected' + (detail ? (' · ' + detail) : '');
+    } else {
+      chipState.textContent = 'Sonic-Stream Offline';
+      chipState.style.color = 'var(--warning)';
+      chipState.style.borderColor = 'rgba(255, 179, 71, 0.35)';
+      chipState.style.background = 'rgba(255, 179, 71, 0.10)';
+      statusDot.style.background = '#4b5563';
+      statusDot.style.boxShadow = 'none';
+      badgeConnection.textContent = 'Moonraker: Offline' + (detail ? (' · ' + detail) : '');
+    }
+  }
+
+  function safeNum(x) { return (typeof x === 'number' && isFinite(x)) ? x : null; }
+
+  async function loadStatus() {
+    try {
+      // 1) Server info confirms Moonraker is reachable
+      const info = await apiGet('/server/info');
+      const version = info?.result?.moonraker_version || info?.result?.version || '';
+      setOnline(true, version ? ('v' + version) : '');
+
+      statBackend.textContent = 'Moonraker' + (version ? (' v' + version) : '');
+      printerSubtitleEl.textContent = (getApiBase() ? ('Moonraker: ' + getApiBase()) : 'Moonraker: same host');
+
+      // 2) Query printer state + temps via objects
+      // Moonraker objects vary; try a broad query:
+      const q = await apiPost('/printer/objects/query', {
+        objects: {
+          print_stats: null,
+          webhooks: null,
+          extruder: null,
+          heater_bed: null
+        }
+      });
+
+      const st = q?.result?.status || {};
+      const ps = st.print_stats || {};
+      const wh = st.webhooks || {};
+      const ex = st.extruder || {};
+      const hb = st.heater_bed || {};
+
+      // State
+      const state = ps.state || wh.state || 'unknown';
+      statState.textContent = (state || 'unknown').toString();
+
+      // File + progress
+      const fn = ps.filename || '–';
+      statFile.textContent = fn || '–';
+      const prog = safeNum(ps?.progress);
+      statProgress.textContent = (prog != null) ? (Math.round(prog * 100) + '%') : '—';
+
+      // Temps
+      const exT = safeNum(ex.temperature);
+      const exTar = safeNum(ex.target);
+      const bedT = safeNum(hb.temperature);
+      const bedTar = safeNum(hb.target);
+
+      tempNozzle.textContent = (exT != null) ? (Math.round(exT) + '°C') : '--°C';
+      tempBed.textContent = (bedT != null) ? (Math.round(bedT) + '°C') : '--°C';
+
+      const nb = (exT != null && exTar) ? Math.min(100, (exT / exTar) * 100) : 0;
+      const bb = (bedT != null && bedTar) ? Math.min(100, (bedT / bedTar) * 100) : 0;
+
+      tempNozzleBar.style.width = nb + '%';
+      tempBedBar.style.width = bb + '%';
+    } catch (e) {
+      setOnline(false, e.message);
+      statBackend.textContent = 'Not connected';
+    }
+  }
+
+  // Boot
+  loadSettings();
+  appendConsole(consoleEl, 'Sonic-Stream loaded. Checking Moonraker…', 'ok');
+  appendConsole(consoleBig, 'Sonic-Stream loaded. Checking Moonraker…', 'ok');
+
+  // First load
+  loadStatus();
+  loadFiles();
+
+  // Poll
+  setInterval(loadStatus, 2500);
+  setInterval(loadFiles, 15000);
+</script>
+
+</body>
+</html>
