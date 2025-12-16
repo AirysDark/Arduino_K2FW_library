@@ -1,247 +1,248 @@
+Arduino_K2FW_library
 
-# Arduino_K2FW_library
+> Device Firmware Blueprint Database → Static Arduino/ESP32 Library
 
-> **Device Firmware Blueprint Database → Static Arduino/ESP32 Library**
 
----
 
-## Table of Contents
-- [Overview](#overview)
-- [Pipeline Summary](#pipeline-summary)
-- [Folder Layout](#folder-layout)
-- [Blueprint JSON Files](#blueprint-json-files)
-  - [PartitionMap.json](#partitionmapjson)
-  - [Paths.json](#pathsjson)
-  - [GcodeMacros.json](#gcodemacrosjson)
-  - [PrintCodes.json](#printcodesjson)
-  - [MotionConfig.json](#motionconfigjson)
-  - [Services.json](#servicesjson)
-  - [WebHints.json](#webhintsjson)
-  - [KeyCatalog.json (optional)](#keycatalogjson-optional)
-- [Arduino Library Consumption](#arduino-library-consumption)
-- [Why This Design](#why-this-design)
-- [Supported Use Cases](#supported-use-cases)
-- [Safety Model](#safety-model)
-- [Regeneration](#regeneration)
-- [License & Ethics](#license--ethics)
-- [Status](#status)
-- [Documentation Index](#documentation-index)
 
 ---
 
-## Overview
+Table of Contents
 
-This repository builds a **hardware / firmware blueprint database** from a real device firmware dump  
-(e.g. Creality K2-class devices), then compiles that data into a **static Arduino/ESP32 library**.
+Overview
+
+Pipeline Summary
+
+Folder Layout
+
+Blueprint JSON Files
+
+Arduino Library Consumption
+
+DeviceBlueprintLib (v1.1.0)
+
+Why This Design
+
+Supported Use Cases
+
+Safety Model
+
+Regeneration
+
+License & Ethics
+
+Status
+
+Documentation Index
+
+
+
+---
+
+Overview
+
+This repository builds a hardware / firmware blueprint database from a real device firmware dump
+(e.g. Creality K2-class devices), then compiles that data into a static Arduino/ESP32 library.
 
 The database is:
 
-- Extracted on PC (Python)
-- Normalized into JSON
-- Compiled into C++ headers
-- Consumed at runtime with **zero guessing**
+Extracted on PC (Python)
 
-**No parsing on-device.**  
-**No heuristics.**  
-**No hard-coded offsets.**
+Normalized into JSON
+
+Compiled into C++ headers
+
+Consumed at runtime with zero guessing
+
+
+No parsing on-device.
+No heuristics.
+No hard-coded offsets.
 
 📘 Start here:
-- [Database Specification](read/README.db.md)
-- [Arduino Library API](read/README.lib.md)
+
+Database Specification
+
+Arduino Library API
+
+
 
 ---
 
-## Pipeline Summary
+Pipeline Summary
 
-Firmware dump (libk2/) ↓ Python extractors (tools/) ↓ Normalized JSON (blueprint/) ↓ C++ generators (tools/gen_*) ↓ Static Arduino DB (DeviceBlueprintLib/src/generated/)
+Firmware dump (libk2/)
+        ↓
+Python extractors (tools/)
+        ↓
+Normalized JSON (blueprint/)
+        ↓
+C++ generators (tools/gen_*)
+        ↓
+Static Arduino DB (DeviceBlueprintLib/src/generated/)
 
-Each stage is **deterministic and reproducible**.
+Each stage is deterministic and reproducible.
 
-🔧 Full pipeline details:  
-→ [Tools & Pipeline](read/README.tools.md)
+🔧 Full details:
+→ Tools & Pipeline
+
 
 ---
 
-## Folder Layout
+Folder Layout
 
-libk2/                 ← Raw firmware dump (images, filesystems, sw-description) blueprint/             ← Extracted & normalized JSON (truth source) DeviceBlueprintLib/    ← Arduino/ESP32 library tools/                 ← Python extractors + generators read/                  ← Documentation
+libk2/                  ← Raw firmware dump (images, filesystems, sw-description)
+blueprint/              ← Extracted & normalized JSON (truth source)
+DeviceBlueprintLib/     ← Arduino/ESP32 library
+tools/                  ← Python extractors + generators
+read/                   ← Documentation
 
-📂 JSON meanings & schemas:  
-→ [Blueprint JSON Reference](read/README.blueprint.md)
+📂 JSON schemas & meanings:
+→ Blueprint JSON Reference
+
 
 ---
 
-## Blueprint JSON Files
+Blueprint JSON Files
 
-These files represent the **authoritative device knowledge**.
+These files represent the authoritative device knowledge.
 
-### PartitionMap.json
+PartitionMap.json
 
-**Source of truth for flash layout.**
+Source of truth for flash layout.
 
-- Parsed from `sw-description` (primary)
-- GPT used only for bounds verification
-- Includes:
-  - Partition names
-  - LBA ranges
-  - Sizes
-  - Roles (boot, rootfs, data, recovery)
+Parsed from sw-description (primary)
+
+GPT used only for bounds verification
+
+Partition names, LBA ranges, sizes, roles
+
 
 Generated header:
 
 k2_partitions_db.h
 
-📘 Details:  
-→ [Database Spec → PartitionMap](read/README.db.md#partitionmapjson)
+📘 Details:
+→ PartitionMap
+
 
 ---
 
-### Paths.json
+Paths.json
 
-**Filesystem discovery index.**
-
-- Config directories
-- Macro locations
-- Databases
-- Web UI roots
-- Logs
-- Update paths
-
-Used by **all extractors** for auto-discovery.
+Filesystem discovery index used by all extractors.
 
 Generated header:
 
 k2_paths_db.h
 
-📘 Details:  
-→ [Database Spec → Paths](read/README.db.md#pathsjson)
+📘 Details:
+→ Paths
+
 
 ---
 
-### GcodeMacros.json
+GcodeMacros.json
 
-**Extracted G-code macros.**
-
-- Macro name
-- Source file
-- Commands issued
-- Referenced M/G codes
+Extracted G-code macros with referenced M/G codes.
 
 Generated header:
 
 k2_gcode_macros_db.h
 
-📘 Details:  
-→ [Database Spec → G-code Macros](read/README.db.md#gcodemacrosjson)
+📘 Details:
+→ G-code Macros
+
 
 ---
 
-### PrintCodes.json
+PrintCodes.json
 
-**Full M-code / G-code catalog.**
-
-For each code:
-- Meaning / description
-- Parameters
-- Safety notes (when detectable)
-- Macros that use it
+Semantic catalog of all M/G codes.
 
 Generated header:
 
 k2_printcodes_db.h
 
-Enables **semantic G-code usage**, not raw strings.
+📘 Details:
+→ Print Codes
 
-📘 Details:  
-→ [Database Spec → Print Codes](read/README.db.md#printcodesjson)
 
 ---
 
-### MotionConfig.json
+MotionConfig.json
 
-**Motion and kinematics limits.**
-
-- Steps/mm
-- Max velocity
-- Acceleration
-- Jerk / junction deviation
-- Axis limits
+Motion and kinematics limits.
 
 Generated header:
 
 k2_motion_limits_db.h
 
-📘 Details:  
-→ [Database Spec → Motion Config](read/README.db.md#motionconfigjson)
+📘 Details:
+→ Motion Config
+
 
 ---
 
-### Services.json
+Services.json
 
-**Linux / application services.**
-
-- systemd / init services
-- Ports
-- IPC hints
-- Readiness indicators
+Linux / application services and IPC hints.
 
 Generated header:
 
 k2_services_db.h
 
-📘 Details:  
-→ [Database Spec → Services](read/README.db.md#servicesjson)
+📘 Details:
+→ Services
+
 
 ---
 
-### WebHints.json
+WebHints.json
 
-**Web UI and API discovery.**
-
-- Endpoints
-- Paths
-- JSON schemas (where inferable)
+Web UI & API discovery.
 
 Generated header:
 
 k2_web_endpoints_db.h
 
-📘 Details:  
-→ [Database Spec → Web Hints](read/README.db.md#webhintsjson)
+📘 Details:
+→ Web Hints
+
 
 ---
 
-### KeyCatalog.json (optional)
+KeyCatalog.json (optional)
 
-**Unified key registry** for ID-based access.
+Unified ID registry:
 
-Includes:
-- `PART_*`, `PATH_*`, `GC_*`
-- `M_*`, `G_*`
-- `SVC_*`, `EP_*`
+PART_*, PATH_*, GC_*
+
+M_*, G_*
+
+SVC_*, EP_*
+
 
 Generated header:
 
 k2_key_catalog.h
 
-📘 Details:  
-→ [Database Spec → Key Catalog](read/README.db.md#keycatalogjson)
+📘 Details:
+→ Key Catalog
+
 
 ---
 
-## Arduino Library Consumption
+Arduino Library Consumption
 
-The Arduino library **never parses JSON**.
+The Arduino library never parses JSON.
 
-It includes **generated headers only**:
+It includes generated headers only:
 
-```cpp
 #include "generated/k2_partitions_db.h"
 #include "generated/k2_paths_db.h"
 #include "generated/k2_printcodes_db.h"
 #include "generated/k2_gcode_macros_db.h"
-
-Example usage
 
 auto part = K2Partitions::get(PART_ROOTFS_A);
 Serial.println(part.size_bytes);
@@ -252,8 +253,60 @@ GCodeSender::run(macro);
 auto code = K2PrintCodes::get(M_28);
 Serial.println(code.meaning);
 
-📗 Full API & patterns:
-→ Arduino Library API
+📗 Full API: → Arduino Library API
+
+
+---
+
+DeviceBlueprintLib (v1.1.0)
+
+Static blueprint database + safe execution helpers for ESP32/Arduino.
+
+This library consumes:
+
+Compile-time generated headers (device truth)
+
+Optional runtime JSON assets (macros / scripts / prompts) from LittleFS or SD
+
+
+Quick Start
+
+#include <Arduino.h>
+#include "DeviceBlueprintLib.h"
+#include "core/K2SafetyGuard.h"
+
+DeviceBlueprintLib bp;
+K2SafetyGuard guard;
+
+void setup() {
+  Serial.begin(115200);
+  Serial2.begin(115200);
+
+  DeviceBlueprintLib::init(&Serial);
+
+  bp.begin(Serial2, &Serial);
+  bp.attachSafetyGuard(&guard);
+  bp.armSafety(0xC0FFEE01); // enables file upload APIs
+
+  // Optional runtime assets
+  // bp.loadAssets("/GcodeMacros.json", "/CommandScripts.json", "/Prompts.json");
+
+  auto part = K2Partitions::get(PART_ROOTFS_A);
+  Serial.printf("ROOTFS_A size=%llu\n",
+    (unsigned long long)part.size_bytes);
+}
+void loop() {}
+
+Safety
+
+Destructive operations are fail-closed unless armed:
+
+fileBegin / fileWriteLine / fileEnd
+
+uploadGcodeFromFS (M28/M29)
+
+
+Scripts (CMD_*) can also be gated if enabled.
 
 
 ---
@@ -262,7 +315,7 @@ Why This Design
 
 Why sw-description is the truth
 
-Defines actual update layout
+Defines real update layout
 
 Independent of disk image quirks
 
@@ -271,9 +324,9 @@ Used by the device itself
 Prevents destructive writes
 
 
-GPT is used only to sanity-check bounds.
+GPT is used only for bounds sanity-checking.
 
-🔒 More detail:
+🔒 Details:
 → Security Model
 
 
@@ -281,25 +334,23 @@ GPT is used only to sanity-check bounds.
 
 Why JSON first, C++ second
 
-Python excels at parsing and discovery
+Python excels at parsing
 
-JSON is inspectable, diffable, versionable
+JSON is inspectable & diffable
 
-C++ headers are fast, safe, and deterministic on MCUs
+C++ headers are deterministic on MCUs
 
-
-This keeps the ESP32 lean and predictable.
 
 
 ---
 
 Supported Use Cases
 
-ESP32 UART bridge / rescue tools
+ESP32 UART rescue bridges
 
 Safe backup & restore
 
-G-code injection with semantic meaning
+Semantic G-code injection
 
 Motion validation
 
@@ -323,12 +374,12 @@ Never write outside known partitions
 
 Never guess offsets
 
-Never assume firmware layout
+Never assume layout
 
 Fail closed, not open
 
 
-All destructive operations are explicitly gated by the database.
+All destructive ops are gated by the database.
 
 🔒 Full rules:
 → SECURITY.md
@@ -347,7 +398,7 @@ This will:
 1. Rebuild all JSON
 
 
-2. Rebuild all Arduino headers
+2. Regenerate all Arduino headers
 
 
 3. Keep the library in sync
@@ -359,13 +410,11 @@ This will:
 
 License & Ethics
 
-This project:
+No proprietary firmware distributed
 
-Does not distribute proprietary firmware
+No cryptography reversed
 
-Does not reverse cryptography
-
-Extracts structure and behavior, not source
+Structure & behavior only
 
 
 Comparable in intent to Klipper, Marlin, OpenWRT.
@@ -377,7 +426,8 @@ Status
 
 ✔ Extraction pipeline complete
 ✔ Static Arduino DB generation complete
-✔ No runtime parsing required
+✔ Safety guard integrated
+✔ No runtime parsing
 ✔ Cross-device ready
 
 

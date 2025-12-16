@@ -1,0 +1,6 @@
+DeviceBlueprintLib	KEYWORD1
+K2SafetyGuard	KEYWORD1
+K2Partitions	KEYWORD1
+K2Paths	KEYWORD1
+K2PrintCodes	KEYWORD1
+K2Macros	KEYWORD1

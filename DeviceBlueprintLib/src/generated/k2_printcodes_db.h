@@ -874,3 +874,6 @@ static const PrintCode K2_PRINTCODES[K2_PRINTCODE_COUNT] = {
   { "M_999", "", "", "" },
 };
 } // namespace K2
+
+static_assert(K2_PRINTCODE_COUNT > 0, "PrintCodes DB empty");
+

@@ -10563,3 +10563,6 @@ static const PathItem K2_PATHS[K2_PATH_COUNT] = {
   { "PATH_VAR", "/var" },
 };
 } // namespace K2
+
+static_assert(K2_PATH_COUNT > 0, "Paths DB empty");
+

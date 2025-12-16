@@ -6,3 +6,6 @@ static const size_t K2_MACRO_COUNT = 0;
 static const MacroItem K2_MACROS[K2_MACRO_COUNT] = {
 };
 } // namespace K2
+
+static_assert(K2_GC_COUNT > 0, "GcodeMacros DB empty");
+
