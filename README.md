@@ -247,7 +247,7 @@ Fail closed, not open
 All destructive ops are gated by the database.  
 
 🔒 Full rules:  
-→ [read/SECURITY.md](read/SECURITY.md)  
+→ [SECURITY](read/SECURITY.md)  
 
 ---
 
