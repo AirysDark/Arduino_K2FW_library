@@ -1,8 +1,99 @@
 {
   "meta": {
     "dump_root": "C:\\Users\\AirysDark\\Documents\\GitHub\\Arduino_K2FW_library\\libk2",
-    "source": null,
-    "mode": "none"
+    "source_sw_description": "C:\\Users\\AirysDark\\Documents\\GitHub\\Arduino_K2FW_library\\libk2\\sw-description",
+    "source_gpt_partition_map": null,
+    "mode": "sw-description-primary",
+    "notes": [
+      "sw-description is treated as truth (update intent + device mapping).",
+      "GPT PartitionMap (if provided) is used only as bounds-check; LBA ranges attached on name-match."
+    ]
   },
-  "partitions": {}
+  "partitions": {
+    "PART_DEV_BY_NAME_BOOTB": {
+      "name": "/dev/by-name/bootB",
+      "device": "/dev/by-name/bootB",
+      "type": "",
+      "role": "kernel",
+      "slot": -1,
+      "critical": true,
+      "updateable": true,
+      "images": [
+        "kernel"
+      ],
+      "sw_fields": {
+        "filename": "kernel",
+        "device": "/dev/by-name/bootB",
+        "directly": true
+      }
+    },
+    "PART_DEV_BY_NAME_ROOTFSB": {
+      "name": "/dev/by-name/rootfsB",
+      "device": "/dev/by-name/rootfsB",
+      "type": "",
+      "role": "rootfs",
+      "slot": -1,
+      "critical": true,
+      "updateable": true,
+      "images": [
+        "rootfs"
+      ],
+      "sw_fields": {
+        "filename": "rootfs",
+        "device": "/dev/by-name/rootfsB",
+        "directly": true
+      }
+    },
+    "PART_DEV_BY_NAME_BOOTA": {
+      "name": "/dev/by-name/bootA",
+      "device": "/dev/by-name/bootA",
+      "type": "",
+      "role": "kernel",
+      "slot": -1,
+      "critical": true,
+      "updateable": true,
+      "images": [
+        "kernel"
+      ],
+      "sw_fields": {
+        "filename": "kernel",
+        "device": "/dev/by-name/bootA",
+        "directly": true
+      }
+    },
+    "PART_DEV_BY_NAME_ROOTFSA": {
+      "name": "/dev/by-name/rootfsA",
+      "device": "/dev/by-name/rootfsA",
+      "type": "",
+      "role": "rootfs",
+      "slot": -1,
+      "critical": true,
+      "updateable": true,
+      "images": [
+        "rootfs"
+      ],
+      "sw_fields": {
+        "filename": "rootfs",
+        "device": "/dev/by-name/rootfsA",
+        "directly": true
+      }
+    }
+  },
+  "images": {
+    "kernel": {
+      "count": 2,
+      "partitions": [
+        "PART_DEV_BY_NAME_BOOTA",
+        "PART_DEV_BY_NAME_BOOTB"
+      ]
+    },
+    "rootfs": {
+      "count": 2,
+      "partitions": [
+        "PART_DEV_BY_NAME_ROOTFSA",
+        "PART_DEV_BY_NAME_ROOTFSB"
+      ]
+    }
+  },
+  "warnings": []
 }

@@ -3,6 +3,10 @@
     "dump_root": "C:\\Users\\AirysDark\\Documents\\GitHub\\Arduino_K2FW_library\\libk2"
   },
   "commands": {
+    "CMD_LINUX_REBOOT": {
+      "context": "linux",
+      "script": "reboot"
+    },
     "CMD_UBOOT_RESET": {
       "context": "uboot",
       "script": "reset"
@@ -14,10 +18,6 @@
     "CMD_UBOOT_PRINTENV": {
       "context": "uboot",
       "script": "printenv"
-    },
-    "CMD_LINUX_REBOOT": {
-      "context": "linux",
-      "script": "reboot"
     },
     "CMD_LINUX_JOURNALCTL": {
       "context": "linux",

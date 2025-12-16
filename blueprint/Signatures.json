@@ -36,7 +36,6 @@
       "usr/lib/python3.9/site-packages/pip/_vendor/rich/logging.py"
     ],
     "SIG_MOTOR_CHECK": [
-      "mnt/udisk/printer_data/logs/klippy.log",
       "mnt/udisk/printer_data/logs/klippy.log.2020-01-01",
       "mnt/udisk/printer_data/logs/moonraker.log"
     ]
