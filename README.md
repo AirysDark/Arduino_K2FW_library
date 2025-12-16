@@ -246,7 +246,7 @@ Fail closed, not open
 All destructive ops are gated by the database.
 
 🔒 Full rules:
-→ read/SECURITY.md
+→ (read/SECURITY.md)
 
 ---
 
@@ -262,10 +262,10 @@ All destructive ops are gated by the database.
 
 ## Documentation Index
 
-📘 Database Specification: read/README.db.md
-📗 Arduino Library API: read/README.lib.md
-📂 Blueprint JSON Reference: read/README.blueprint.md
-🔧 Tools & Pipeline: read/README.tools.md
-🔒 Security Model: read/SECURITY.md
-❓ FAQ: read/FAQ.md
-🤝 Contributing: read/CONTRIBUTING.md
+- 📘 [Database Specification](read/README.db.md)
+- 📗 [Arduino Library API](read/README.lib.md)
+- 📂 [Blueprint JSON Reference](read/README.blueprint.md)
+- 🔧 [Tools & Pipeline](read/README.tools.md)
+- 🔒 [Security Model](read/SECURITY.md)
+- ❓ [FAQ](read/FAQ.md)
+- 🤝 [Contributing](read/CONTRIBUTING.md)
