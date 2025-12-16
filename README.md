@@ -42,211 +42,212 @@ No hard-coded offsets.
 
 📘 Start here:
 
-Database Specification: read/README.db.md
-Arduino Library API: read/README.lib.md
+Database Specification: [read/README.db.md](read/README.db.md)  
+Arduino Library API: [read/README.lib.md](read/README.lib.md)  
 
----
+---  
 
-## Pipeline Summary
+## Pipeline Summary  
 
-Firmware dump (libk2/)
-        ↓
-Python extractors (tools/)
-        ↓
-Normalized JSON (blueprint/)
-        ↓
-C++ generators (tools/gen_*)
-        ↓
-Static Arduino DB (DeviceBlueprintLib/src/generated/)
+Firmware dump (libk2/)  
+        ↓  
+Python extractors (tools/)  
+        ↓  
+Normalized JSON (blueprint/)  
+        ↓  
+C++ generators (tools/gen_*)  
+        ↓  
+Static Arduino DB (DeviceBlueprintLib/src/generated/)  
 
-Each stage is deterministic and reproducible.
+Each stage is deterministic and reproducible.  
 
-🔧 Full details:
-→ read/README.tools.md
+🔧 Full details:  
+→ [read/README.tools.md](read/README.tools.md)  
 
----
+---  
 
-## Folder Layout
+## Folder Layout  
 
-libk2/                  ← Raw firmware dump (images, filesystems, sw-description)
-blueprint/              ← Extracted & normalized JSON (truth source)
-DeviceBlueprintLib/     ← Arduino/ESP32 library
-tools/                  ← Python extractors + generators
-read/                   ← Documentation
+libk2/                  ← Raw firmware dump (images, filesystems, sw-description)  
+blueprint/              ← Extracted & normalized JSON (truth source)  
+DeviceBlueprintLib/     ← Arduino/ESP32 library  
+tools/                  ← Python extractors + generators  
+read/                   ← Documentation  
 
-📂 JSON schemas & meanings:
-→ read/README.blueprint.md
+📂 JSON schemas & meanings:  
+→ [read/README.blueprint.md](read/README.blueprint.md)  
 
----
+---  
 
-## Blueprint JSON Files
+## Blueprint JSON Files  
 
-These files represent the authoritative device knowledge.
+These files represent the authoritative device knowledge.  
 
-PartitionMap.json
+PartitionMap.json  
 
-Source of truth for flash layout.
+Source of truth for flash layout.  
 
-Parsed from sw-description (primary)
+Parsed from sw-description (primary)  
 
-GPT used only for bounds verification
+GPT used only for bounds verification  
 
-Partition names, LBA ranges, sizes, roles
+Partition names, LBA ranges, sizes, roles  
 
-Generated header:
+Generated header:  
 
-k2_partitions_db.h
+k2_partitions_db.h  
 
-📘 Details:
-→ read/README.db.md#partitionmapjson
+📘 Details:  
+→ [read/README.db.md#partitionmapjson](read/README.db.md#partitionmapjson)  
 
----
+---  
 
-Paths.json
+Paths.json  
 
-Filesystem discovery index used by all extractors.
+Filesystem discovery index used by all extractors.  
 
-Generated header:
+Generated header:  
 
-k2_paths_db.h
+k2_paths_db.h  
 
-📘 Details:
-→ read/README.db.md#pathsjson
+📘 Details:  
+→ [read/README.db.md#pathsjson](read/README.db.md#pathsjson)  
 
----
+---  
 
-GcodeMacros.json
+GcodeMacros.json  
 
-Extracted G-code macros with referenced M/G codes.
+Extracted G-code macros with referenced M/G codes.  
 
-Generated header:
+Generated header:  
 
-k2_gcode_macros_db.h
+k2_gcode_macros_db.h  
 
-📘 Details:
-→ read/README.db.md#gcodemacrosjson
+📘 Details:  
+→ [read/README.db.md#gcodemacrosjson](read/README.db.md#gcodemacrosjson)  
 
----
+---  
 
-PrintCodes.json
+PrintCodes.json  
 
-Semantic catalog of all M/G codes.
+Semantic catalog of all M/G codes.  
 
-Generated header:
+Generated header:  
 
-k2_printcodes_db.h
+k2_printcodes_db.h  
 
-📘 Details:
-→ read/README.db.md#printcodesjson
+📘 Details:  
+→ [read/README.db.md#printcodesjson](read/README.db.md#printcodesjson)  
 
----
+---  
 
-MotionConfig.json
+MotionConfig.json  
 
-Motion and kinematics limits.
+Motion and kinematics limits.  
 
-Generated header:
+Generated header:  
 
-k2_motion_limits_db.h
+k2_motion_limits_db.h  
 
-📘 Details:
-→ read/README.db.md#motionconfigjson
+📘 Details:  
+→ [read/README.db.md#motionconfigjson](read/README.db.md#motionconfigjson)  
 
----
+---  
 
-Services.json
+Services.json  
 
-Linux / application services and IPC hints.
+Linux / application services and IPC hints.  
 
-Generated header:
+Generated header:  
 
-k2_services_db.h
+k2_services_db.h  
 
-📘 Details:
-→ read/README.db.md#servicesjson
+📘 Details:  
+→ [read/README.db.md#servicesjson](read/README.db.md#servicesjson)  
 
----
+---  
 
-WebHints.json
+WebHints.json  
 
-Web UI & API discovery.
+Web UI & API discovery.  
 
-Generated header:
+Generated header:  
 
-k2_web_endpoints_db.h
+k2_web_endpoints_db.h  
 
-📘 Details:
-→ read/README.db.md#webhintsjson
+📘 Details:  
+→ [read/README.db.md#webhintsjson](read/README.db.md#webhintsjson)  
 
----
+---  
 
-KeyCatalog.json (optional)
+KeyCatalog.json (optional)  
 
-Unified ID registry:
+Unified ID registry:  
 
-PART_*, PATH_*, GC_*
-M_*, G_*
-SVC_*, EP_*
+PART_*, PATH_*, GC_*  
+M_*, G_*  
+SVC_*, EP_*  
 
-Generated header:
+Generated header:  
 
-k2_key_catalog.h
+k2_key_catalog.h  
 
-📘 Details:
-→ read/README.db.md#keycatalogjson
+📘 Details:  
+→ [read/README.db.md#keycatalogjson](read/README.db.md#keycatalogjson)  
 
----
+---  
 
-## Arduino Library Consumption
+## Arduino Library Consumption  
 
-The Arduino library never parses JSON.
+The Arduino library never parses JSON.  
 
-It includes generated headers only:
+It includes generated headers only:  
 
-#include "generated/k2_partitions_db.h"
-#include "generated/k2_paths_db.h"
-#include "generated/k2_printcodes_db.h"
-#include "generated/k2_gcode_macros_db.h"
+#include "generated/k2_partitions_db.h"  
+#include "generated/k2_paths_db.h"  
+#include "generated/k2_printcodes_db.h"  
+#include "generated/k2_gcode_macros_db.h"  
 
-auto part = K2Partitions::get(PART_ROOTFS_A);
-Serial.println(part.size_bytes);
+auto part = K2Partitions::get(PART_ROOTFS_A);  
+Serial.println(part.size_bytes);  
 
-auto macro = K2Macros::get(GC_HOME_ALL);
-GCodeSender::run(macro);
+auto macro = K2Macros::get(GC_HOME_ALL);  
+GCodeSender::run(macro);  
 
-auto code = K2PrintCodes::get(M_28);
-Serial.println(code.meaning);
+auto code = K2PrintCodes::get(M_28);  
+Serial.println(code.meaning);  
 
-📗 Full API:
-→ read/README.lib.md
+📗 Full API:  
 
----
+→ [read/README.lib.md](read/README.lib.md)  
 
-## DeviceBlueprintLib (v1.1.0)
+---  
 
-Static blueprint database + safe execution helpers for ESP32/Arduino.
+## DeviceBlueprintLib (v1.1.0)  
 
-This library consumes:
+Static blueprint database + safe execution helpers for ESP32/Arduino.  
 
-Compile-time generated headers (device truth)
+This library consumes:  
 
-Optional runtime JSON assets (macros / scripts / prompts) from LittleFS or SD
+Compile-time generated headers (device truth)  
 
----
+Optional runtime JSON assets (macros / scripts / prompts) from LittleFS or SD  
 
-## Safety Model
+---  
 
-Designed to:
+## Safety Model  
 
-Never write outside known partitions
-Never guess offsets
-Never assume layout
-Fail closed, not open
+Designed to:  
 
-All destructive ops are gated by the database.
+Never write outside known partitions  
+Never guess offsets  
+Never assume layout  
+Fail closed, not open  
 
-🔒 Full rules:
-→ read/SECURITY.md
+All destructive ops are gated by the database.  
+
+🔒 Full rules:  
+→ [read/SECURITY.md](read/SECURITY.md)  
 
 ---
 
@@ -262,10 +263,10 @@ All destructive ops are gated by the database.
 
 ## Documentation Index
 
-📘 Database Specification: read/README.db.md
-📗 Arduino Library API: read/README.lib.md
-📂 Blueprint JSON Reference: read/README.blueprint.md
-🔧 Tools & Pipeline: read/README.tools.md
-🔒 Security Model: read/SECURITY.md
-❓ FAQ: read/FAQ.md
-🤝 Contributing: read/CONTRIBUTING.md
+- 📘 [Database Specification](read/README.db.md)
+- 📗 [Arduino Library API](read/README.lib.md)
+- 📂 [Blueprint JSON Reference](read/README.blueprint.md)
+- 🔧 [Tools & Pipeline](read/README.tools.md)
+- 🔒 [Security Model](read/SECURITY.md)
+- ❓ [FAQ](read/FAQ.md)
+- 🤝 [Contributing](read/CONTRIBUTING.md)
