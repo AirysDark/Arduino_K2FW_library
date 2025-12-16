@@ -176,7 +176,7 @@ Generated header:
 k2_web_endpoints_db.h
 
 📘 Details:
-→ read/README.db.md#webhintsjson
+→ [web](read/README.db.md#webhintsjson)
 
 ---
 
@@ -193,7 +193,7 @@ Generated header:
 k2_key_catalog.h
 
 📘 Details:
-→ read/README.db.md#keycatalogjson
+→ [KEYcatalog](read/README.db.md#keycatalogjson)
 
 ---
 
@@ -218,7 +218,8 @@ auto code = K2PrintCodes::get(M_28);
 Serial.println(code.meaning);
 
 📗 Full API:
-→ read/README.lib.md
+
+→ [API](read/README.lib.md)
 
 ---
 
@@ -246,7 +247,7 @@ Fail closed, not open
 All destructive ops are gated by the database.
 
 🔒 Full rules:
-→ (read/SECURITY.md)
+→ [Security Model](read/SECURITY.md)
 
 ---
 
