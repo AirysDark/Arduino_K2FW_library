@@ -1,0 +1,8 @@
+{
+  "CMD_UBOOT_UMS0": {
+    "name": "UBoot UMS mmc0",
+    "mode": "uboot",
+    "lines": ["ums 0 mmc 0"],
+    "expect": "=>"
+  }
+}

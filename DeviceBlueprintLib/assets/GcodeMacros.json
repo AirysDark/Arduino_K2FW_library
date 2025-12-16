@@ -1,0 +1,4 @@
+{
+  "GC_00012": { "name": "Home All", "text": "G28\n", "ok": "ok" },
+  "GC_M_Z2": { "name": "Move Z +2", "text": "G91\nG1 Z2 F600\nG90\n", "ok": "ok" }
+}

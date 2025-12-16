@@ -1,0 +1,9 @@
+{
+  "uboot": { "prompt": "=>" },
+  "linux": {
+    "login": "login:",
+    "password": "Password:",
+    "shell_root": "#",
+    "shell_user": "$"
+  }
+}
