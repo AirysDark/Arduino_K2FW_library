@@ -24,3 +24,8 @@ Then upload JSON files to ESP32 LittleFS and call:
 ```cpp
 lib.loadAssets("/GcodeMacros.json","/CommandScripts.json","/Prompts.json");
 ```
+
+
+## New extractors
+- PrinterData index -> blueprint/PrinterData.json
+- FileOps (M28/M29 + HTTP hints) -> blueprint/FileOps.json

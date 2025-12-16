@@ -4,8 +4,17 @@
 #include "core/ConsoleDetect.h"
 #include "core/ScriptRunner.h"
 #include "core/GCodeSender.h"
+#include "core/FileTransferM28.h"
 
 class DeviceBlueprintLib {
+public:
+  // File transfer (M28/M29)
+  bool fileBegin(const String& remote) { _ft.setIO(_io); return _ft.begin(remote); }
+  bool fileWriteLine(const String& line) { _ft.setIO(_io); return _ft.writeLine(line); }
+  bool fileEnd() { _ft.setIO(_io); return _ft.end(); }
+  bool uploadGcodeFromFS(FS& fs, const String& localPath, const String& remote) { _ft.setIO(_io); return _ft.uploadFromFS(fs, localPath, remote); }
+
+
 public:
   bool begin(Stream& target, Stream* debug = nullptr);
   bool loadAssets(const char* gcodeJsonPath,

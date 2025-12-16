@@ -1,0 +1,1882 @@
+{
+  "meta": {
+    "dump_root": "C:\\Users\\AirysDark\\Documents\\GitHub\\Arduino_K2FW_library\\libk2"
+  },
+  "printer_data": {
+    "roots": [
+      "/mnt/UDISK/printer_data"
+    ],
+    "items": {
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_BOX_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/box.cfg",
+        "category": "config",
+        "name": "box.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_FACTORY_PRINTER_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/factory_printer.cfg",
+        "category": "config",
+        "name": "factory_printer.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_GCODE_MACRO_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/gcode_macro.cfg",
+        "category": "macros",
+        "name": "gcode_macro.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_MACROS_PURE_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/macros_pure.cfg",
+        "category": "macros",
+        "name": "macros_pure.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_MACRO_PUREKLIPPERK2_CFG_BK": {
+        "path": "/mnt/UDISK/printer_data/config/macro_pureklipperk2.cfg.bk",
+        "category": "macros",
+        "name": "macro_pureklipperk2.cfg.bk"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_MACRO_PURE_KLIPPER_K2_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/macro_pure_klipper_k2.cfg",
+        "category": "macros",
+        "name": "macro_pure_klipper_k2.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_MOONRAKER_USER_CONF": {
+        "path": "/mnt/UDISK/printer_data/config/moonraker-user.conf",
+        "category": "config",
+        "name": "moonraker-user.conf"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_MOTOR_CONTROL_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/motor_control.cfg",
+        "category": "config",
+        "name": "motor_control.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_PRINTER_20200101_080545_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/printer-20200101_080545.cfg",
+        "category": "config",
+        "name": "printer-20200101_080545.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_PRINTER_20251212_141148_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/printer-20251212_141148.cfg",
+        "category": "config",
+        "name": "printer-20251212_141148.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_PRINTER_20251212_141149_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/printer-20251212_141149.cfg",
+        "category": "config",
+        "name": "printer-20251212_141149.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_PRINTER_20251212_143041_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/printer-20251212_143041.cfg",
+        "category": "config",
+        "name": "printer-20251212_143041.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_PRINTER_20251212_145927_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/printer-20251212_145927.cfg",
+        "category": "config",
+        "name": "printer-20251212_145927.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_PRINTER_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/printer.cfg",
+        "category": "config",
+        "name": "printer.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_PRINTER_PARAMS_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/printer_params.cfg",
+        "category": "config",
+        "name": "printer_params.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_SENSORLESS_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/sensorless.cfg",
+        "category": "config",
+        "name": "sensorless.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_CONFIG_USER_MACROS_CFG": {
+        "path": "/mnt/UDISK/printer_data/config/user_macros.cfg",
+        "category": "macros",
+        "name": "user_macros.cfg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_DATABASE_DATA_MDB": {
+        "path": "/mnt/UDISK/printer_data/database/data.mdb",
+        "category": "database",
+        "name": "data.mdb"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_DATABASE_LOCK_MDB": {
+        "path": "/mnt/UDISK/printer_data/database/lock.mdb",
+        "category": "database",
+        "name": "lock.mdb"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_GCODES_3DBENCH_PLA_22M_GCODE": {
+        "path": "/mnt/UDISK/printer_data/gcodes/3DBench_PLA_22m.gcode",
+        "category": "macros",
+        "name": "3DBench_PLA_22m.gcode"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_GCODES_4COLOR_3DBENCH_PLA_32M_GCODE": {
+        "path": "/mnt/UDISK/printer_data/gcodes/4color-3DBench_PLA_32m.gcode",
+        "category": "macros",
+        "name": "4color-3DBench_PLA_32m.gcode"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_GCODES_SPATULA_PLA_34M53S_GCODE": {
+        "path": "/mnt/UDISK/printer_data/gcodes/spatula_PLA_34m53s.gcode",
+        "category": "macros",
+        "name": "spatula_PLA_34m53s.gcode"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_LOGS_KLIPPY_LOG": {
+        "path": "/mnt/UDISK/printer_data/logs/klippy.log",
+        "category": "misc",
+        "name": "klippy.log"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_LOGS_KLIPPY_LOG_2020_01_01": {
+        "path": "/mnt/UDISK/printer_data/logs/klippy.log.2020-01-01",
+        "category": "misc",
+        "name": "klippy.log.2020-01-01"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_LOGS_MOONRAKER_LOG": {
+        "path": "/mnt/UDISK/printer_data/logs/moonraker.log",
+        "category": "misc",
+        "name": "moonraker.log"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_LOGS_MOONRAKER_LOG_2020_01_01": {
+        "path": "/mnt/UDISK/printer_data/logs/moonraker.log.2020-01-01",
+        "category": "misc",
+        "name": "moonraker.log.2020-01-01"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD__VERSION": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/.version",
+        "category": "misc",
+        "name": ".version"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_CONFIG_JSON": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/config.json",
+        "category": "config",
+        "name": "config.json"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_EDITOR_THEME_JSON": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/editor.theme.json",
+        "category": "config",
+        "name": "editor.theme.json"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_FAVICON_ICO": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/favicon.ico",
+        "category": "misc",
+        "name": "favicon.ico"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_INDEX_HTML": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/index.html",
+        "category": "webui",
+        "name": "index.html"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_ANNEX_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_annex.svg",
+        "category": "misc",
+        "name": "logo_annex.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_BTT_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_btt.svg",
+        "category": "misc",
+        "name": "logo_btt.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_COCOAPRESS_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_cocoapress.svg",
+        "category": "misc",
+        "name": "logo_cocoapress.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_EVA_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_eva.svg",
+        "category": "misc",
+        "name": "logo_eva.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_FLUIDD_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_fluidd.svg",
+        "category": "misc",
+        "name": "logo_fluidd.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_HEVORT_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_hevort.svg",
+        "category": "misc",
+        "name": "logo_hevort.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_KINGROON_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_kingroon.svg",
+        "category": "misc",
+        "name": "logo_kingroon.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_KLIPPER_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_klipper.svg",
+        "category": "misc",
+        "name": "logo_klipper.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_LDO_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_ldo.svg",
+        "category": "misc",
+        "name": "logo_ldo.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_MELLOW_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_mellow.svg",
+        "category": "misc",
+        "name": "logo_mellow.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_MICRON_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_micron.svg",
+        "category": "misc",
+        "name": "logo_micron.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_PEOPOLY_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_peopoly.svg",
+        "category": "misc",
+        "name": "logo_peopoly.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_PFA_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_pfa.svg",
+        "category": "misc",
+        "name": "logo_pfa.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_PRUSA_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_prusa.svg",
+        "category": "misc",
+        "name": "logo_prusa.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_QIDI_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_qidi.svg",
+        "category": "misc",
+        "name": "logo_qidi.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_RATRIG_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_ratrig.svg",
+        "category": "misc",
+        "name": "logo_ratrig.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_SALAD_FORK_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_salad_fork.svg",
+        "category": "misc",
+        "name": "logo_salad_fork.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_SIBOOR_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_siboor.svg",
+        "category": "misc",
+        "name": "logo_siboor.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_SNAKEOIL_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_snakeoil.svg",
+        "category": "misc",
+        "name": "logo_snakeoil.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_VORON_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_voron.svg",
+        "category": "misc",
+        "name": "logo_voron.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_VZBOT_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_vzbot.svg",
+        "category": "misc",
+        "name": "logo_vzbot.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_Z_BOLT_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_z-bolt.svg",
+        "category": "misc",
+        "name": "logo_z-bolt.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_LOGO_ZEROG_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/logo_zerog.svg",
+        "category": "misc",
+        "name": "logo_zerog.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_MANIFEST_WEBMANIFEST": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/manifest.webmanifest",
+        "category": "misc",
+        "name": "manifest.webmanifest"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_RELEASE_INFO_JSON": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/release_info.json",
+        "category": "config",
+        "name": "release_info.json"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ROBOTS_TXT": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/robots.txt",
+        "category": "misc",
+        "name": "robots.txt"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_SW_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/sw.js",
+        "category": "webui",
+        "name": "sw.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL__VERSION": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/.version",
+        "category": "misc",
+        "name": ".version"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_CONFIG_JSON": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/config.json",
+        "category": "config",
+        "name": "config.json"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_INDEX_HTML": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/index.html",
+        "category": "webui",
+        "name": "index.html"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_MANIFEST_WEBMANIFEST": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/manifest.webmanifest",
+        "category": "misc",
+        "name": "manifest.webmanifest"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_RELEASE_INFO_JSON": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/release_info.json",
+        "category": "config",
+        "name": "release_info.json"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_SW_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/sw.js",
+        "category": "webui",
+        "name": "sw.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_WORKBOX_726AB1CA_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/workbox-726ab1ca.js",
+        "category": "webui",
+        "name": "workbox-726ab1ca.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_UI2__VERSION": {
+        "path": "/mnt/UDISK/printer_data/www/ui2/.version",
+        "category": "misc",
+        "name": ".version"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_UI2_INDEX_HTML": {
+        "path": "/mnt/UDISK/printer_data/www/ui2/index.html",
+        "category": "webui",
+        "name": "index.html"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_UI2_README_MD": {
+        "path": "/mnt/UDISK/printer_data/www/ui2/README.md",
+        "category": "misc",
+        "name": "README.md"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_BAKEDVERTEXANIMATION_DAFYZ7UK_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/bakedVertexAnimation-DafYZ7UK.js",
+        "category": "webui",
+        "name": "bakedVertexAnimation-DafYZ7UK.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_BASISTEXTURELOADER_WPYFOY6A_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/basisTextureLoader-WpYFOy6A.js",
+        "category": "webui",
+        "name": "basisTextureLoader-WpYFOy6A.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_BONESVERTEX_D6BT8C6O_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/bonesVertex-D6bt8c6o.js",
+        "category": "webui",
+        "name": "bonesVertex-D6bt8c6o.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_CLIPPLANEFRAGMENT_C1OTOQGZ_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/clipPlaneFragment-C1OToQGz.js",
+        "category": "webui",
+        "name": "clipPlaneFragment-C1OToQGz.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_CLIPPLANEVERTEX_H_KTTO2I_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/clipPlaneVertex-H_kTTO2i.js",
+        "category": "webui",
+        "name": "clipPlaneVertex-H_kTTO2i.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_CODEMIRROR_DCLZG8PG_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/Codemirror-DClZg8pg.js",
+        "category": "webui",
+        "name": "Codemirror-DClZg8pg.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_CODEMIRROR_ZSHHXWGS_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/codemirror-ZSHHXwGs.js",
+        "category": "webui",
+        "name": "codemirror-ZSHHXwGs.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_COLOR_FRAGMENT_B5HJCZCY_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/color.fragment-B5HjcZCY.js",
+        "category": "webui",
+        "name": "color.fragment-B5HjcZCY.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_COLOR_FRAGMENT_BK157I1Y_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/color.fragment-BK157i1Y.js",
+        "category": "webui",
+        "name": "color.fragment-BK157i1Y.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_COLOR_VERTEX_COL5QO_0_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/color.vertex-COl5Qo_0.js",
+        "category": "webui",
+        "name": "color.vertex-COl5Qo_0.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_COLOR_VERTEX_CZGNHRHU_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/color.vertex-CzgNhRhU.js",
+        "category": "webui",
+        "name": "color.vertex-CzgNhRhU.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_CUBEMAPTOSPHERICALPOLYNOMIAL_DVL0UYWG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/cubemapToSphericalPolynomial-DVL0uyWg.js",
+        "category": "webui",
+        "name": "cubemapToSphericalPolynomial-DVL0uyWg.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_CZ_DF9FNOCR_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/cz-DF9fNOcR.js",
+        "category": "webui",
+        "name": "cz-DF9fNOcR.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_DA_BEJE0FOI_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/da-BEje0fOi.js",
+        "category": "webui",
+        "name": "da-BEje0fOi.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_DDS_OHHRCK0M_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/dds-OHhRCk0m.js",
+        "category": "webui",
+        "name": "dds-OHhRCk0m.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_DDSTEXTURELOADER_PG82GD0F_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/ddsTextureLoader-pg82Gd0f.js",
+        "category": "webui",
+        "name": "ddsTextureLoader-pg82Gd0f.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_DE__6LXC4TG_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/de-_6LXC4Tg.js",
+        "category": "webui",
+        "name": "de-_6LXC4Tg.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_DEFAULT_FRAGMENT_BXGZB35J_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/default.fragment-BXgZb35j.js",
+        "category": "webui",
+        "name": "default.fragment-BXgZb35j.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_DEFAULT_FRAGMENT_CY6Q6ZZN_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/default.fragment-CY6Q6ZzN.js",
+        "category": "webui",
+        "name": "default.fragment-CY6Q6ZzN.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_DEFAULT_VERTEX_5L9K6SJC_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/default.vertex-5L9K6sJc.js",
+        "category": "webui",
+        "name": "default.vertex-5L9K6sJc.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_DEFAULT_VERTEX_CA68D0PF_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/default.vertex-Ca68d0pF.js",
+        "category": "webui",
+        "name": "default.vertex-Ca68d0pF.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_ECHARTS_DZOUEQWP_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/echarts-DzoUeqWp.js",
+        "category": "webui",
+        "name": "echarts-DzoUeqWp.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_EN_OWIDWMCM_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/en-OWidwmcM.js",
+        "category": "webui",
+        "name": "en-OWidwmcM.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_ENVTEXTURELOADER_CZZNFI_W_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/envTextureLoader-CzznFi-W.js",
+        "category": "webui",
+        "name": "envTextureLoader-CzznFi-W.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_ES_BNSYGH_P_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/es-BNSygh-P.js",
+        "category": "webui",
+        "name": "es-BNSygh-P.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_EXRTEXTURELOADER_COX4LJLG_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/exrTextureLoader-Cox4ljlG.js",
+        "category": "webui",
+        "name": "exrTextureLoader-Cox4ljlG.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_FOGFRAGMENT_CUFKRZ_B_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/fogFragment-CufkRZ_b.js",
+        "category": "webui",
+        "name": "fogFragment-CufkRZ_b.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_FR_AFFV7ZID_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/fr-affv7zId.js",
+        "category": "webui",
+        "name": "fr-affv7zId.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_FXAA_FRAGMENT_B98CEPT1_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/fxaa.fragment-B98cepT1.js",
+        "category": "webui",
+        "name": "fxaa.fragment-B98cepT1.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_FXAA_FRAGMENT_NUG_EIZK_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/fxaa.fragment-NUg_eizK.js",
+        "category": "webui",
+        "name": "fxaa.fragment-NUg_eizK.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_FXAA_VERTEX_CMHP2XXO_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/fxaa.vertex-CMHp2xxo.js",
+        "category": "webui",
+        "name": "fxaa.vertex-CMHp2xxo.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_FXAA_VERTEX_D1FASADI_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/fxaa.vertex-D1fAsaDI.js",
+        "category": "webui",
+        "name": "fxaa.vertex-D1fAsaDI.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_GLOWBLURPOSTPROCESS_FRAGMENT_L4MULL6C": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/glowBlurPostProcess.fragment-l4muLl6C.js",
+        "category": "webui",
+        "name": "glowBlurPostProcess.fragment-l4muLl6C.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_GLOWBLURPOSTPROCESS_FRAGMENT_OI7VGKFG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/glowBlurPostProcess.fragment-oI7vgkfg.js",
+        "category": "webui",
+        "name": "glowBlurPostProcess.fragment-oI7vgkfg.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_GLOWMAPGENERATION_FRAGMENT_BXGUEYNO_J": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/glowMapGeneration.fragment-BxGuEYno.js",
+        "category": "webui",
+        "name": "glowMapGeneration.fragment-BxGuEYno.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_GLOWMAPGENERATION_FRAGMENT_DQLGTYOT_J": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/glowMapGeneration.fragment-DQlgTyoT.js",
+        "category": "webui",
+        "name": "glowMapGeneration.fragment-DQlgTyoT.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_GLOWMAPGENERATION_VERTEX_BNF_XCFN_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/glowMapGeneration.vertex-BNF-XCFn.js",
+        "category": "webui",
+        "name": "glowMapGeneration.vertex-BNF-XCFn.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_GLOWMAPGENERATION_VERTEX_BYIZDTQ5_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/glowMapGeneration.vertex-BYizDTQ5.js",
+        "category": "webui",
+        "name": "glowMapGeneration.vertex-BYizDTQ5.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_GLOWMAPMERGE_FRAGMENT_C9HHRQAC_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/glowMapMerge.fragment-C9HhrQac.js",
+        "category": "webui",
+        "name": "glowMapMerge.fragment-C9HhrQac.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_GLOWMAPMERGE_FRAGMENT_DA3GHLX7_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/glowMapMerge.fragment-DA3ghlX7.js",
+        "category": "webui",
+        "name": "glowMapMerge.fragment-DA3ghlX7.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_GLOWMAPMERGE_VERTEX_BSHFTRHN_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/glowMapMerge.vertex-BSHFtrhn.js",
+        "category": "webui",
+        "name": "glowMapMerge.vertex-BSHFtrhn.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_GLOWMAPMERGE_VERTEX_D_STIMQN_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/glowMapMerge.vertex-D_sTImqn.js",
+        "category": "webui",
+        "name": "glowMapMerge.vertex-D_sTImqn.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_HDRTEXTURELOADER_CRVZIBIH_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/hdrTextureLoader-CRVzIBiH.js",
+        "category": "webui",
+        "name": "hdrTextureLoader-CRVzIBiH.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_HEIGHTMAP_2SACNDHQ_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/Heightmap-2SacNdhQ.js",
+        "category": "webui",
+        "name": "Heightmap-2SacNdhQ.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_HEIGHTMAP_D07FSYHR_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/Heightmap-D07fsyhr.css",
+        "category": "webui",
+        "name": "Heightmap-D07fsyhr.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_HELPERFUNCTIONS_LYZG0XJK_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/helperFunctions-lyZG0XJK.js",
+        "category": "webui",
+        "name": "helperFunctions-lyZG0XJK.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_HLSSTREAMER_FES7IBOX_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/Hlsstreamer-FeS7IboX.js",
+        "category": "webui",
+        "name": "Hlsstreamer-FeS7IboX.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_HTMLVIDEO_BWPC8_AA_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/HtmlVideo-BwPc8-Aa.js",
+        "category": "webui",
+        "name": "HtmlVideo-BwPc8-Aa.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_HU_KRDEYYZY_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/hu-krdEyyzy.js",
+        "category": "webui",
+        "name": "hu-krdEyyzy.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_INDEX_CZ1NTIPM_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/index-Cz1NTIpm.css",
+        "category": "webui",
+        "name": "index-Cz1NTIpm.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_INDEX_DEUWG9LT_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/index-DeuWg9LT.js",
+        "category": "webui",
+        "name": "index-DeuWg9LT.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_IT_BXPXAXC7_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/it-BXPxaXC7.js",
+        "category": "webui",
+        "name": "it-BXPxaXC7.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_JA_CFSQV_T9_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/ja-CfSqV-t9.js",
+        "category": "webui",
+        "name": "ja-CfSqV-t9.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_JANUSSTREAMER_BRNQ5TPP_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/JanusStreamer-BRNQ5Tpp.css",
+        "category": "webui",
+        "name": "JanusStreamer-BRNQ5Tpp.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_JANUSSTREAMER_EGAZUVB9_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/JanusStreamer-egaZuvb9.js",
+        "category": "webui",
+        "name": "JanusStreamer-egaZuvb9.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_JMUXERSTREAM_BY5PVOUE_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/JMuxerStream-By5pVOUe.js",
+        "category": "webui",
+        "name": "JMuxerStream-By5pVOUe.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_JMUXERSTREAM_GHY5S_H3_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/JMuxerStream-Ghy5S_h3.css",
+        "category": "webui",
+        "name": "JMuxerStream-Ghy5S_h3.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_KERNELBLUR_FRAGMENT_B7HRSBVO_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/kernelBlur.fragment-B7HrsBvo.js",
+        "category": "webui",
+        "name": "kernelBlur.fragment-B7HrsBvo.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_KERNELBLUR_FRAGMENT_CKGI0SN6_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/kernelBlur.fragment-CKGI0sN6.js",
+        "category": "webui",
+        "name": "kernelBlur.fragment-CKGI0sN6.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_KERNELBLUR_VERTEX_DHQLPSQN_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/kernelBlur.vertex-DhQlPSqn.js",
+        "category": "webui",
+        "name": "kernelBlur.vertex-DhQlPSqn.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_KERNELBLUR_VERTEX_GG44D9NK_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/kernelBlur.vertex-gg44d9nK.js",
+        "category": "webui",
+        "name": "kernelBlur.vertex-gg44d9nK.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_KERNELBLURVARYINGDECLARATION_DTLLFG9B": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/kernelBlurVaryingDeclaration-DtlLfG9b.js",
+        "category": "webui",
+        "name": "kernelBlurVaryingDeclaration-DtlLfG9b.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_KERNELBLURVARYINGDECLARATION_DYZWXGV1": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/kernelBlurVaryingDeclaration-DYzWXGV1.js",
+        "category": "webui",
+        "name": "kernelBlurVaryingDeclaration-DYzWXGV1.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_KO_BRTF7H8F_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/ko-BrTF7h8f.js",
+        "category": "webui",
+        "name": "ko-BrTF7h8f.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_KTXTEXTURELOADER_8CHSKGBB_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/ktxTextureLoader-8ChSkGbb.js",
+        "category": "webui",
+        "name": "ktxTextureLoader-8ChSkGbb.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_LINE_FRAGMENT_CJSW6LE1_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/line.fragment-CJSW6le1.js",
+        "category": "webui",
+        "name": "line.fragment-CJSW6le1.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_LINE_FRAGMENT_CXZVLMU1_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/line.fragment-CxZvlmU1.js",
+        "category": "webui",
+        "name": "line.fragment-CxZvlmU1.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_LINE_VERTEX_CMDRKS3R_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/line.vertex-CmDRkS3R.js",
+        "category": "webui",
+        "name": "line.vertex-CmDRkS3R.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_LINE_VERTEX_DXICQNZW_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/line.vertex-DxiCqnZw.js",
+        "category": "webui",
+        "name": "line.vertex-DxiCqnZw.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_LOGDEPTHDECLARATION_BLIE_PUA_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/logDepthDeclaration-BlIe-pUA.js",
+        "category": "webui",
+        "name": "logDepthDeclaration-BlIe-pUA.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_LOGDEPTHFRAGMENT_BVTEVIPK_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/logDepthFragment-BvtEVIpk.js",
+        "category": "webui",
+        "name": "logDepthFragment-BvtEVIpk.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_LOGDEPTHVERTEX_DL2MLPUH_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/logDepthVertex-DL2MLPUh.js",
+        "category": "webui",
+        "name": "logDepthVertex-DL2MLPUh.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_MAINUVVARYINGDECLARATION_1VP_RZST_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/mainUVVaryingDeclaration-1vp_rzst.js",
+        "category": "webui",
+        "name": "mainUVVaryingDeclaration-1vp_rzst.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_MAINUVVARYINGDECLARATION_DN8LDRE3_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/mainUVVaryingDeclaration-Dn8lDrE3.js",
+        "category": "webui",
+        "name": "mainUVVaryingDeclaration-Dn8lDrE3.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_MESHUBODECLARATION_BBMZCYH5_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/meshUboDeclaration-BBmzCYH5.js",
+        "category": "webui",
+        "name": "meshUboDeclaration-BBmzCYH5.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_MJPEGSTREAMER_DQAKUDZ__CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/Mjpegstreamer-DqaKUdZ_.css",
+        "category": "webui",
+        "name": "Mjpegstreamer-DqaKUdZ_.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_MJPEGSTREAMER_ESL3EDEE_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/Mjpegstreamer-EsL3EdeE.js",
+        "category": "webui",
+        "name": "Mjpegstreamer-EsL3EdeE.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_MJPEGSTREAMERADAPTIVE_BI7G5FJT_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/MjpegstreamerAdaptive-BI7G5fJT.js",
+        "category": "webui",
+        "name": "MjpegstreamerAdaptive-BI7G5fJT.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_MJPEGSTREAMERADAPTIVE_XHKYIUW0_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/MjpegstreamerAdaptive-XhKyIuw0.css",
+        "category": "webui",
+        "name": "MjpegstreamerAdaptive-XhKyIuw0.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_MORPHTARGETSVERTEX_B9R5HVWC_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/morphTargetsVertex-B9R5HVwC.js",
+        "category": "webui",
+        "name": "morphTargetsVertex-B9R5HVwC.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_MORPHTARGETSVERTEX_CVNVQJHJ_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/morphTargetsVertex-CVNVQJHj.js",
+        "category": "webui",
+        "name": "morphTargetsVertex-CVNVQJHj.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_NL_D0_TU5FW_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/nl-D0_Tu5Fw.js",
+        "category": "webui",
+        "name": "nl-D0_Tu5Fw.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_OVERLAYSCROLLBARS_BJN_P54__CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/overlayscrollbars-BJn_P54_.css",
+        "category": "webui",
+        "name": "overlayscrollbars-BJn_P54_.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_OVERLAYSCROLLBARS_CIKU261J_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/overlayscrollbars-CiKU261J.js",
+        "category": "webui",
+        "name": "overlayscrollbars-CiKU261J.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_PASS_FRAGMENT_C2OS1JVP_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/pass.fragment-C2Os1jVp.js",
+        "category": "webui",
+        "name": "pass.fragment-C2Os1jVp.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_PASS_FRAGMENT_CB3RTWD9_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/pass.fragment-CB3rTwd9.js",
+        "category": "webui",
+        "name": "pass.fragment-CB3rTwd9.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_PL_DD8RHPDS_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/pl-DD8rHpDS.js",
+        "category": "webui",
+        "name": "pl-DD8rHpDS.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_POSTPROCESS_VERTEX_B3YS20IJ_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/postprocess.vertex-B3YS20iJ.js",
+        "category": "webui",
+        "name": "postprocess.vertex-B3YS20iJ.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_PT_D_2WDVCQ_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/pt-D_2wdVcq.js",
+        "category": "webui",
+        "name": "pt-D_2wdVcq.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_RGBDDECODE_FRAGMENT_DQQO4QKS_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/rgbdDecode.fragment-DqQO4Qks.js",
+        "category": "webui",
+        "name": "rgbdDecode.fragment-DqQO4Qks.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_RGBDDECODE_FRAGMENT_U4I0NX83_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/rgbdDecode.fragment-u4I0nX83.js",
+        "category": "webui",
+        "name": "rgbdDecode.fragment-u4I0nX83.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_RU_CSCC_TBY_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/ru-Cscc_TBY.js",
+        "category": "webui",
+        "name": "ru-Cscc_TBY.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_SE_CAW0OONU_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/se-Caw0oOnu.js",
+        "category": "webui",
+        "name": "se-Caw0oOnu.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_SK_B303QLGC_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/sk-B303QlGc.js",
+        "category": "webui",
+        "name": "sk-B303QlGc.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_TGATEXTURELOADER_YKXLCKOA_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/tgaTextureLoader-ykxlckOA.js",
+        "category": "webui",
+        "name": "tgaTextureLoader-ykxlckOA.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_TR_UATEUSPB_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/tr-uateUSPB.js",
+        "category": "webui",
+        "name": "tr-uateUSPB.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_UK_BI8UWC5A_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/uk-BI8uwC5A.js",
+        "category": "webui",
+        "name": "uk-BI8uwC5A.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_UV4LMJPEG_QG76HWFC_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/Uv4lMjpeg-QG76Hwfc.js",
+        "category": "webui",
+        "name": "Uv4lMjpeg-QG76Hwfc.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_VERTEXCOLORMIXING_BS4_9ATP_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/vertexColorMixing-Bs4_9aTp.js",
+        "category": "webui",
+        "name": "vertexColorMixing-Bs4_9aTp.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_VERTEXCOLORMIXING_DHBUKNVI_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/vertexColorMixing-DhbUKnVi.js",
+        "category": "webui",
+        "name": "vertexColorMixing-DhbUKnVi.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_VIEWER_BN5SW4CB_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/Viewer-Bn5sW4cB.css",
+        "category": "webui",
+        "name": "Viewer-Bn5sW4cB.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_VIEWER_CMWDBHPK_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/Viewer-CMwDBhPk.js",
+        "category": "webui",
+        "name": "Viewer-CMwDBhPk.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_VIRTUAL_PWA_REGISTER_CHA4XB1__JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/virtual_pwa-register-CHa4xb1_.js",
+        "category": "webui",
+        "name": "virtual_pwa-register-CHa4xb1_.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_VUETIFY_BSWS9O2D_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/vuetify-BSwS9o2d.css",
+        "category": "webui",
+        "name": "vuetify-BSwS9o2d.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_VUETIFY_MW_MA8E1_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/vuetify-mw-Ma8e1.js",
+        "category": "webui",
+        "name": "vuetify-mw-Ma8e1.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_WEBCAMNOZZLECROSSHAIR_CUM9VA_Z_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/WebcamNozzleCrosshair-CUm9VA_z.js",
+        "category": "webui",
+        "name": "WebcamNozzleCrosshair-CUm9VA_z.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_WEBCAMNOZZLECROSSHAIR_NYNM_ZBO_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/WebcamNozzleCrosshair-nYNM-zbo.css",
+        "category": "webui",
+        "name": "WebcamNozzleCrosshair-nYNM-zbo.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_WEBRTCCAMERASTREAMER_BRNLGQUZ_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/WebrtcCameraStreamer-BRNlGQUz.css",
+        "category": "webui",
+        "name": "WebrtcCameraStreamer-BRNlGQUz.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_WEBRTCCAMERASTREAMER_DSFC5DLI_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/WebrtcCameraStreamer-DSfC5DLi.js",
+        "category": "webui",
+        "name": "WebrtcCameraStreamer-DSfC5DLi.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_WEBRTCGO2RTC_BSAENY4H_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/WebrtcGo2rtc-Bsaeny4h.css",
+        "category": "webui",
+        "name": "WebrtcGo2rtc-Bsaeny4h.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_WEBRTCGO2RTC_CKJ1MQCL_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/WebrtcGo2rtc-CkJ1mqcL.js",
+        "category": "webui",
+        "name": "WebrtcGo2rtc-CkJ1mqcL.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_WEBRTCMEDIAMTX_B5_YOYES_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/WebrtcMediaMTX-B5-Yoyes.css",
+        "category": "webui",
+        "name": "WebrtcMediaMTX-B5-Yoyes.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_WEBRTCMEDIAMTX_BFEW7FZW_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/WebrtcMediaMTX-Bfew7fZW.js",
+        "category": "webui",
+        "name": "WebrtcMediaMTX-Bfew7fZW.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_WORKBOX_WINDOW_PROD_ES5_C7ZTCMQ__JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/workbox-window.prod.es5-C7zTcMQ_.js",
+        "category": "webui",
+        "name": "workbox-window.prod.es5-C7zTcMQ_.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_ZH_D5TM3JRH_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/zh-D5TM3jRH.js",
+        "category": "webui",
+        "name": "zh-D5TM3jRH.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_ASSETS_ZH_TW_BQFFPO8R_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/assets/zh_TW-BQfFPO8r.js",
+        "category": "webui",
+        "name": "zh_TW-BQfFPO8r.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_FONTS_ROBOTO_BLACK_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/fonts/roboto-black.woff2",
+        "category": "misc",
+        "name": "roboto-black.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_FONTS_ROBOTO_BOLD_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/fonts/roboto-bold.woff2",
+        "category": "misc",
+        "name": "roboto-bold.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_FONTS_ROBOTO_LIGHT_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/fonts/roboto-light.woff2",
+        "category": "misc",
+        "name": "roboto-light.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_FONTS_ROBOTO_MEDIUM_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/fonts/roboto-medium.woff2",
+        "category": "misc",
+        "name": "roboto-medium.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_FONTS_ROBOTO_REGULAR_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/fonts/roboto-regular.woff2",
+        "category": "misc",
+        "name": "roboto-regular.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_FONTS_ROBOTO_THIN_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/fonts/roboto-thin.woff2",
+        "category": "misc",
+        "name": "roboto-thin.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_FONTS_ROBOTOMONO_REGULAR_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/fonts/robotoMono-regular.woff",
+        "category": "misc",
+        "name": "robotoMono-regular.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_KLIPPER_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/klipper.svg",
+        "category": "misc",
+        "name": "klipper.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_LOGO_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/logo.svg",
+        "category": "misc",
+        "name": "logo.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_SIDEBAR_BACKGROUND_LIGHT_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/sidebar-background-light.svg",
+        "category": "misc",
+        "name": "sidebar-background-light.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_SIDEBAR_BACKGROUND_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/sidebar-background.svg",
+        "category": "misc",
+        "name": "sidebar-background.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_ICONS_APPLE_TOUCH_ICON_180X180_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/icons/apple-touch-icon-180x180.png",
+        "category": "misc",
+        "name": "apple-touch-icon-180x180.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_ICONS_FAVICON_16X16_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/icons/favicon-16x16.png",
+        "category": "misc",
+        "name": "favicon-16x16.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_ICONS_FAVICON_32X32_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/icons/favicon-32x32.png",
+        "category": "misc",
+        "name": "favicon-32x32.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_ICONS_ICON_192_MASKABLE_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/icons/icon-192-maskable.png",
+        "category": "misc",
+        "name": "icon-192-maskable.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_ICONS_ICON_512_MASKABLE_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/icons/icon-512-maskable.png",
+        "category": "misc",
+        "name": "icon-512-maskable.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_ICONS_MSTILE_150X150_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/icons/mstile-150x150.png",
+        "category": "misc",
+        "name": "mstile-150x150.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_ICONS_SAFARI_PINNED_TAB_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/icons/safari-pinned-tab.svg",
+        "category": "misc",
+        "name": "safari-pinned-tab.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_THEMES_SIDEBARBACKGROUND_VZBOT_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/themes/sidebarBackground-vzbot.png",
+        "category": "misc",
+        "name": "sidebarBackground-vzbot.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_THEMES_SIDEBARLOGO_BTT_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/themes/sidebarLogo-btt.svg",
+        "category": "misc",
+        "name": "sidebarLogo-btt.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_THEMES_SIDEBARLOGO_KLIPPER_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/themes/sidebarLogo-klipper.svg",
+        "category": "misc",
+        "name": "sidebarLogo-klipper.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_THEMES_SIDEBARLOGO_LDO_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/themes/sidebarLogo-ldo.svg",
+        "category": "misc",
+        "name": "sidebarLogo-ldo.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_THEMES_SIDEBARLOGO_MULTEC_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/themes/sidebarLogo-multec.svg",
+        "category": "misc",
+        "name": "sidebarLogo-multec.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_THEMES_SIDEBARLOGO_PRUSA_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/themes/sidebarLogo-prusa.svg",
+        "category": "misc",
+        "name": "sidebarLogo-prusa.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_THEMES_SIDEBARLOGO_VORON_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/themes/sidebarLogo-voron.svg",
+        "category": "misc",
+        "name": "sidebarLogo-voron.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_THEMES_SIDEBARLOGO_VZBOT_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/themes/sidebarLogo-vzbot.svg",
+        "category": "misc",
+        "name": "sidebarLogo-vzbot.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_IMG_THEMES_SIDEBARLOGO_YUMI_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/img/themes/sidebarLogo-yumi.svg",
+        "category": "misc",
+        "name": "sidebarLogo-yumi.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_MAINSAIL_CSS_THEMES_VZBOT_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Mainsail/css/themes/vzbot.css",
+        "category": "webui",
+        "name": "vzbot.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_AF_CJJ16OYD_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/af-CjJ16Oyd.js",
+        "category": "webui",
+        "name": "af-CjJ16Oyd.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_AR_BUXCAGYH_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/ar-BUXcaGYh.js",
+        "category": "webui",
+        "name": "ar-BUXcaGYh.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_CAMERA_DBBHXVY1_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/camera-DbBhxvY1.js",
+        "category": "webui",
+        "name": "camera-DbBhxvY1.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_CODICON_B_Z2XQ3P_TTF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/codicon-B_Z2XQ3P.ttf",
+        "category": "misc",
+        "name": "codicon-B_Z2XQ3P.ttf"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_CS_BMFI7J4S_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/cs-BMFi7j4s.js",
+        "category": "webui",
+        "name": "cs-BMFi7j4s.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_CSS_D_SLBKV0_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/css-D-slbKV0.js",
+        "category": "webui",
+        "name": "css-D-slbKV0.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_CSSMODE_CE2QYFFS_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/cssMode-Ce2qyfFs.js",
+        "category": "webui",
+        "name": "cssMode-Ce2qyfFs.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_DE_CC5YWWM5_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/de-Cc5YWWM5.js",
+        "category": "webui",
+        "name": "de-Cc5YWWM5.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_DEVICECAMERA_DBB_LSNG_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/DeviceCamera-DBB-lsNG.js",
+        "category": "webui",
+        "name": "DeviceCamera-DBB-lsNG.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ES_DFIS_5A0_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/es-Dfis_5A0.js",
+        "category": "webui",
+        "name": "es-Dfis_5A0.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_FR_DDZPTIZT_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/fr-DdZPTIzT.js",
+        "category": "webui",
+        "name": "fr-DdZPTIzT.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_GCODE_TMLANGUAGE_CXXTZJZ__JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/gcode.tmLanguage-CxxTzjZ-.js",
+        "category": "webui",
+        "name": "gcode.tmLanguage-CxxTzjZ-.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_HLSSTREAMCAMERA_DAF3HSZE_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/HlsstreamCamera-DaF3HSZE.js",
+        "category": "webui",
+        "name": "HlsstreamCamera-DaF3HSZE.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_HU_D_XD2I6K_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/hu-D-XD2I6k.js",
+        "category": "webui",
+        "name": "hu-D-XD2I6k.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_IFRAMECAMERA_CQ2FQH4G_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/IframeCamera-CQ2Fqh4g.js",
+        "category": "webui",
+        "name": "IframeCamera-CQ2Fqh4g.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_INDEX_BGK7WTGE_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/index-BGk7wtgE.js",
+        "category": "webui",
+        "name": "index-BGk7wtgE.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_INDEX_CZBLUZ8B_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/index-Czbluz8b.css",
+        "category": "webui",
+        "name": "index-Czbluz8b.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_IPSTREAMCAMERA_1OXLUB1J_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/IpstreamCamera-1oxLuB1j.js",
+        "category": "webui",
+        "name": "IpstreamCamera-1oxLuB1j.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_IT_CHT40QB0_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/it-Cht40QB0.js",
+        "category": "webui",
+        "name": "it-Cht40QB0.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_JA_CE55FDW4_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/ja-CE55fDw4.js",
+        "category": "webui",
+        "name": "ja-CE55fDw4.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_JSONMODE_B0O4ABBV_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/jsonMode-B0O4ABbv.js",
+        "category": "webui",
+        "name": "jsonMode-B0O4ABbv.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_KLIPPER_CONFIG_TMLANGUAGE_DHE00U4K_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/klipper-config.tmLanguage-DHe00u4k.js",
+        "category": "webui",
+        "name": "klipper-config.tmLanguage-DHe00u4k.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_KO_D_KKALTI_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/ko-D-kKaltI.js",
+        "category": "webui",
+        "name": "ko-D-kKaltI.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_LOG_TMLANGUAGE_DH_QWE___JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/log.tmLanguage-DH-qwE--.js",
+        "category": "webui",
+        "name": "log.tmLanguage-DH-qwE--.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_MARKDOWN_CLYPNYEA_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/markdown-ClypNyeA.js",
+        "category": "webui",
+        "name": "markdown-ClypNyeA.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_MJPEGSTREAM_WORKER_LO74F1JZ_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/mjpegStream.worker-LO74F1Jz.js",
+        "category": "webui",
+        "name": "mjpegStream.worker-LO74F1Jz.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_MJPEGSTREAMERADAPTIVECAMERA_CSEWDVWA_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/MjpegstreamerAdaptiveCamera-CsEwDVWa.js",
+        "category": "webui",
+        "name": "MjpegstreamerAdaptiveCamera-CsEwDVWa.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_MJPEGSTREAMERCAMERA_C4HEB8MH_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/MjpegstreamerCamera-C4hEB8mH.js",
+        "category": "webui",
+        "name": "MjpegstreamerCamera-C4hEB8mH.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_NL_CULJQBF8_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/nl-CUlJQBF8.js",
+        "category": "webui",
+        "name": "nl-CUlJQBF8.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ONIGASM_KQXUTR47_WASM": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/onigasm-kQxuTr47.wasm",
+        "category": "misc",
+        "name": "onigasm-kQxuTr47.wasm"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_PARSEGCODE_WORKER_8__1YCTH_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/parseGcode.worker-8--1YCth.js",
+        "category": "webui",
+        "name": "parseGcode.worker-8--1YCth.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_PL_GGL3GSHY_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/pl-gGl3GSHY.js",
+        "category": "webui",
+        "name": "pl-gGl3GSHY.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_PT_B2HF5JJB_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/pt-B2hF5Jjb.js",
+        "category": "webui",
+        "name": "pt-B2hF5Jjb.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_PT_BR_CIVKAJBE_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/pt_BR-CIvKajBE.js",
+        "category": "webui",
+        "name": "pt_BR-CIvKajBE.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_QR_SCANNER_WORKER_MIN_D85Z9GVD_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/qr-scanner-worker.min-D85Z9gVD.js",
+        "category": "webui",
+        "name": "qr-scanner-worker.min-D85Z9gVD.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_RALEWAY_CYRILLIC_400_NORMAL_B1ZXQHSH_WO": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/raleway-cyrillic-400-normal-B1ZxqHSH.woff2",
+        "category": "misc",
+        "name": "raleway-cyrillic-400-normal-B1ZxqHSH.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_RALEWAY_CYRILLIC_400_NORMAL_BOK4FNQ__WO": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/raleway-cyrillic-400-normal-BOk4FNQ-.woff",
+        "category": "misc",
+        "name": "raleway-cyrillic-400-normal-BOk4FNQ-.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_RALEWAY_CYRILLIC_EXT_400_NORMAL_QD38ACP": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/raleway-cyrillic-ext-400-normal-QD38Acpa.woff",
+        "category": "misc",
+        "name": "raleway-cyrillic-ext-400-normal-QD38Acpa.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_RALEWAY_CYRILLIC_EXT_400_NORMAL_ZBV6UFV": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/raleway-cyrillic-ext-400-normal-zbv6uFvq.woff2",
+        "category": "misc",
+        "name": "raleway-cyrillic-ext-400-normal-zbv6uFvq.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_RALEWAY_LATIN_400_NORMAL_C5EIEFLM_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/raleway-latin-400-normal-C5eIEfLm.woff2",
+        "category": "misc",
+        "name": "raleway-latin-400-normal-C5eIEfLm.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_RALEWAY_LATIN_400_NORMAL_SMCQ1OIP_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/raleway-latin-400-normal-sMcq1OIP.woff",
+        "category": "misc",
+        "name": "raleway-latin-400-normal-sMcq1OIP.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_RALEWAY_LATIN_EXT_400_NORMAL_B4D0SYMR_W": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/raleway-latin-ext-400-normal-B4d0sYmR.woff2",
+        "category": "misc",
+        "name": "raleway-latin-ext-400-normal-B4d0sYmR.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_RALEWAY_LATIN_EXT_400_NORMAL_DOUY7GWE_W": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/raleway-latin-ext-400-normal-DoUy7GWe.woff",
+        "category": "misc",
+        "name": "raleway-latin-ext-400-normal-DoUy7GWe.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_RALEWAY_VIETNAMESE_400_NORMAL_CTQJ18IX_": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/raleway-vietnamese-400-normal-CTqj18iX.woff",
+        "category": "misc",
+        "name": "raleway-vietnamese-400-normal-CTqj18iX.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_RALEWAY_VIETNAMESE_400_NORMAL_CTW6K1XJ_": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/raleway-vietnamese-400-normal-CTw6K1Xj.woff2",
+        "category": "misc",
+        "name": "raleway-vietnamese-400-normal-CTw6K1Xj.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_300_NORMAL_BOECR7EV_WOF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-300-normal-BoeCr7ev.woff2",
+        "category": "misc",
+        "name": "roboto-cyrillic-300-normal-BoeCr7ev.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_300_NORMAL_D568C3AM_WOF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-300-normal-D568C3aM.woff",
+        "category": "misc",
+        "name": "roboto-cyrillic-300-normal-D568C3aM.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_400_NORMAL_DAIM1_DR_WOF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-400-normal-DAIM1_dR.woff2",
+        "category": "misc",
+        "name": "roboto-cyrillic-400-normal-DAIM1_dR.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_400_NORMAL_DZJJI7RX_WOF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-400-normal-DZJji7Rx.woff",
+        "category": "misc",
+        "name": "roboto-cyrillic-400-normal-DZJji7Rx.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_500_NORMAL_BI4HUXRE_WOF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-500-normal-BI4HuXre.woff",
+        "category": "misc",
+        "name": "roboto-cyrillic-500-normal-BI4HuXre.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_500_NORMAL_HCEO1JFL_WOF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-500-normal-hCeO1jFL.woff2",
+        "category": "misc",
+        "name": "roboto-cyrillic-500-normal-hCeO1jFL.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_700_NORMAL_BISG5NNW_WOF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-700-normal-BiSG5NnW.woff2",
+        "category": "misc",
+        "name": "roboto-cyrillic-700-normal-BiSG5NnW.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_700_NORMAL_KQAQ5BNP_WOF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-700-normal-KqaQ5bNp.woff",
+        "category": "misc",
+        "name": "roboto-cyrillic-700-normal-KqaQ5bNp.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_EXT_300_NORMAL_CUPJDUZP": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-ext-300-normal-CUPJdUZp.woff2",
+        "category": "misc",
+        "name": "roboto-cyrillic-ext-300-normal-CUPJdUZp.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_EXT_300_NORMAL_DQDCC27I": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-ext-300-normal-DQdcc27I.woff",
+        "category": "misc",
+        "name": "roboto-cyrillic-ext-300-normal-DQdcc27I.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_EXT_400_NORMAL_DTZHUW6I": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-ext-400-normal-DtZHuW6i.woff",
+        "category": "misc",
+        "name": "roboto-cyrillic-ext-400-normal-DtZHuW6i.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_EXT_400_NORMAL_DZMWDK87": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-ext-400-normal-DzMWdK87.woff2",
+        "category": "misc",
+        "name": "roboto-cyrillic-ext-400-normal-DzMWdK87.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_EXT_500_NORMAL_B7RQPWPU": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-ext-500-normal-B7rQpwPu.woff2",
+        "category": "misc",
+        "name": "roboto-cyrillic-ext-500-normal-B7rQpwPu.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_EXT_500_NORMAL_C927YMRB": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-ext-500-normal-C927yMrb.woff",
+        "category": "misc",
+        "name": "roboto-cyrillic-ext-500-normal-C927yMrb.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_EXT_700_NORMAL_BUQGZIRO": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-ext-700-normal-BuQgZIrO.woff",
+        "category": "misc",
+        "name": "roboto-cyrillic-ext-700-normal-BuQgZIrO.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_CYRILLIC_EXT_700_NORMAL_UFN0VR9R": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-cyrillic-ext-700-normal-UFn0vR9r.woff2",
+        "category": "misc",
+        "name": "roboto-cyrillic-ext-700-normal-UFn0vR9r.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_GREEK_300_NORMAL_CNUB06J7_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-greek-300-normal-Cnub06j7.woff2",
+        "category": "misc",
+        "name": "roboto-greek-300-normal-Cnub06j7.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_GREEK_300_NORMAL_CTJ2MFNN_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-greek-300-normal-CTj2MfNN.woff",
+        "category": "misc",
+        "name": "roboto-greek-300-normal-CTj2MfNN.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_GREEK_400_NORMAL_CCIZSNRP_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-greek-400-normal-CcizSnRP.woff",
+        "category": "misc",
+        "name": "roboto-greek-400-normal-CcizSnRP.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_GREEK_400_NORMAL_JFM2CZAU_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-greek-400-normal-jFM2czAU.woff2",
+        "category": "misc",
+        "name": "roboto-greek-400-normal-jFM2czAU.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_GREEK_500_NORMAL_BJMS0HEP_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-greek-500-normal-BJMS0heP.woff2",
+        "category": "misc",
+        "name": "roboto-greek-500-normal-BJMS0heP.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_GREEK_500_NORMAL_BLLWU9W__WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-greek-500-normal-BLLWU9W-.woff",
+        "category": "misc",
+        "name": "roboto-greek-500-normal-BLLWU9W-.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_GREEK_700_NORMAL_BCGN9DOZ_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-greek-700-normal-BcGn9doz.woff2",
+        "category": "misc",
+        "name": "roboto-greek-700-normal-BcGn9doz.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_GREEK_700_NORMAL_D3KMAF0K_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-greek-700-normal-D3kmAf0K.woff",
+        "category": "misc",
+        "name": "roboto-greek-700-normal-D3kmAf0K.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_300_NORMAL_CZTWKFGS_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-300-normal-CztWkFGs.woff2",
+        "category": "misc",
+        "name": "roboto-latin-300-normal-CztWkFGs.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_300_NORMAL_KBYCBSAD_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-300-normal-KByCBsad.woff",
+        "category": "misc",
+        "name": "roboto-latin-300-normal-KByCBsad.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_400_NORMAL_068YXGMN_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-400-normal-068yxgMN.woff",
+        "category": "misc",
+        "name": "roboto-latin-400-normal-068yxgMN.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_400_NORMAL_CNWBRW8H_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-400-normal-CNwBRw8h.woff2",
+        "category": "misc",
+        "name": "roboto-latin-400-normal-CNwBRw8h.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_500_NORMAL_CC5NHZKH_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-500-normal-CC5nhZkh.woff",
+        "category": "misc",
+        "name": "roboto-latin-500-normal-CC5nhZkh.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_500_NORMAL_CKRA1NAY_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-500-normal-CkrA1NAy.woff2",
+        "category": "misc",
+        "name": "roboto-latin-500-normal-CkrA1NAy.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_700_NORMAL_CXEAXETI_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-700-normal-CXeAXeti.woff2",
+        "category": "misc",
+        "name": "roboto-latin-700-normal-CXeAXeti.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_700_NORMAL_DUEKQERP_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-700-normal-DUekQERp.woff",
+        "category": "misc",
+        "name": "roboto-latin-700-normal-DUekQERp.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_EXT_300_NORMAL_BOZ0OSMX_WO": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-ext-300-normal-BOz0oSmX.woff2",
+        "category": "misc",
+        "name": "roboto-latin-ext-300-normal-BOz0oSmX.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_EXT_300_NORMAL_TCF9Y2TG_WO": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-ext-300-normal-Tcf9y2tg.woff",
+        "category": "misc",
+        "name": "roboto-latin-ext-300-normal-Tcf9y2tg.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_EXT_400_NORMAL_ETRLN0NT_WO": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-ext-400-normal-eTRLN0Nt.woff",
+        "category": "misc",
+        "name": "roboto-latin-ext-400-normal-eTRLN0Nt.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_EXT_400_NORMAL_ZYMYXEOY_WO": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-ext-400-normal-ZYmyxeOy.woff2",
+        "category": "misc",
+        "name": "roboto-latin-ext-400-normal-ZYmyxeOy.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_EXT_500_NORMAL_C_ARLJGK_WO": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-ext-500-normal-C_ARlJGk.woff2",
+        "category": "misc",
+        "name": "roboto-latin-ext-500-normal-C_ARlJGk.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_EXT_500_NORMAL_FFCS8VBN_WO": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-ext-500-normal-FFcS8vBN.woff",
+        "category": "misc",
+        "name": "roboto-latin-ext-500-normal-FFcS8vBN.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_EXT_700_NORMAL_70GS1MYH_WO": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-ext-700-normal-70GS1MYH.woff2",
+        "category": "misc",
+        "name": "roboto-latin-ext-700-normal-70GS1MYH.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_LATIN_EXT_700_NORMAL_BS1OUQQR_WO": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-latin-ext-700-normal-BS1OuQqR.woff",
+        "category": "misc",
+        "name": "roboto-latin-ext-700-normal-BS1OuQqR.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_MATH_300_NORMAL_BMXWZQMU_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-math-300-normal-BMxwzQmU.woff2",
+        "category": "misc",
+        "name": "roboto-math-300-normal-BMxwzQmU.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_MATH_300_NORMAL_BU9CUCYJ_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-math-300-normal-BU9CUCyj.woff",
+        "category": "misc",
+        "name": "roboto-math-300-normal-BU9CUCyj.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_MATH_400_NORMAL_B3WGZ80T_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-math-400-normal-B3wgz80t.woff2",
+        "category": "misc",
+        "name": "roboto-math-400-normal-B3wgz80t.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_MATH_400_NORMAL_RZXYVYVT_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-math-400-normal-rzxYvyVt.woff",
+        "category": "misc",
+        "name": "roboto-math-400-normal-rzxYvyVt.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_MATH_500_NORMAL_CFNAIMFC_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-math-500-normal-CFNaIMFC.woff2",
+        "category": "misc",
+        "name": "roboto-math-500-normal-CFNaIMFC.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_MATH_500_NORMAL_DAFX_ZC8_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-math-500-normal-DaFX-ZC8.woff",
+        "category": "misc",
+        "name": "roboto-math-500-normal-DaFX-ZC8.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_MATH_700_NORMAL_PYD1NHOV_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-math-700-normal-pYD1nhov.woff",
+        "category": "misc",
+        "name": "roboto-math-700-normal-pYD1nhov.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_MATH_700_NORMAL_VUAI6BZ2_WOFF2": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-math-700-normal-VUAI6Bz2.woff2",
+        "category": "misc",
+        "name": "roboto-math-700-normal-VUAI6Bz2.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_SYMBOLS_300_NORMAL_BTHL5MYL_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-symbols-300-normal-BtHl5mYl.woff2",
+        "category": "misc",
+        "name": "roboto-symbols-300-normal-BtHl5mYl.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_SYMBOLS_300_NORMAL_KYOSXP_D_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-symbols-300-normal-kyoSXp-d.woff",
+        "category": "misc",
+        "name": "roboto-symbols-300-normal-kyoSXp-d.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_SYMBOLS_400_NORMAL_FF1SLJBJ_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-symbols-400-normal-fF1SLJBj.woff2",
+        "category": "misc",
+        "name": "roboto-symbols-400-normal-fF1SLJBj.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_SYMBOLS_400_NORMAL_TZUUNGUB_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-symbols-400-normal-Tzuungub.woff",
+        "category": "misc",
+        "name": "roboto-symbols-400-normal-Tzuungub.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_SYMBOLS_500_NORMAL_BXFTXRNR_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-symbols-500-normal-BXFTxrNR.woff2",
+        "category": "misc",
+        "name": "roboto-symbols-500-normal-BXFTxrNR.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_SYMBOLS_500_NORMAL_CAHAE_IK_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-symbols-500-normal-CAhAe-ik.woff",
+        "category": "misc",
+        "name": "roboto-symbols-500-normal-CAhAe-ik.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_SYMBOLS_700_NORMAL_CUUVBBXY_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-symbols-700-normal-CuuvBBxy.woff",
+        "category": "misc",
+        "name": "roboto-symbols-700-normal-CuuvBBxy.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_SYMBOLS_700_NORMAL_RJI6RJIY_WOFF": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-symbols-700-normal-rJi6RjIy.woff2",
+        "category": "misc",
+        "name": "roboto-symbols-700-normal-rJi6RjIy.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_VIETNAMESE_300_NORMAL_CNEULW5X_W": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-vietnamese-300-normal-CNeuLW5X.woff2",
+        "category": "misc",
+        "name": "roboto-vietnamese-300-normal-CNeuLW5X.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_VIETNAMESE_300_NORMAL_DXBG9GDZ_W": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-vietnamese-300-normal-DXBG9gdz.woff",
+        "category": "misc",
+        "name": "roboto-vietnamese-300-normal-DXBG9gdz.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_VIETNAMESE_400_NORMAL_CDDXGRUB_W": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-vietnamese-400-normal-CDDxGrUb.woff2",
+        "category": "misc",
+        "name": "roboto-vietnamese-400-normal-CDDxGrUb.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_VIETNAMESE_400_NORMAL_DMXAN3YE_W": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-vietnamese-400-normal-DmXaN3yE.woff",
+        "category": "misc",
+        "name": "roboto-vietnamese-400-normal-DmXaN3yE.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_VIETNAMESE_500_NORMAL_DW96CSRR_W": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-vietnamese-500-normal-DW96CsrR.woff",
+        "category": "misc",
+        "name": "roboto-vietnamese-500-normal-DW96CsrR.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_VIETNAMESE_500_NORMAL_HYPUFUYK_W": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-vietnamese-500-normal-HYpufUYk.woff2",
+        "category": "misc",
+        "name": "roboto-vietnamese-500-normal-HYpufUYk.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_VIETNAMESE_700_NORMAL_DZ0HWF_W_W": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-vietnamese-700-normal-Dz0HwF-w.woff",
+        "category": "misc",
+        "name": "roboto-vietnamese-700-normal-Dz0HwF-w.woff"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ROBOTO_VIETNAMESE_700_NORMAL_IKXYNAZQ_W": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/roboto-vietnamese-700-normal-iKxYNAzq.woff2",
+        "category": "misc",
+        "name": "roboto-vietnamese-700-normal-iKxYNAzq.woff2"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_RU_DN1USW9F_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/ru-DN1Usw9F.js",
+        "category": "webui",
+        "name": "ru-DN1Usw9F.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_SANDBOXEDEVAL_WORKER_DVYQBFXO_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/sandboxedEval.worker-DvyQbFXo.js",
+        "category": "webui",
+        "name": "sandboxedEval.worker-DvyQbFXo.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_SETUPMONACO_B05WAEN2_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/setupMonaco-B05waen2.css",
+        "category": "webui",
+        "name": "setupMonaco-B05waen2.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_SETUPMONACO_C3ACRIUJ_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/setupMonaco-C3acRIuj.js",
+        "category": "webui",
+        "name": "setupMonaco-C3acRIuj.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_SETUPMONACO_CTZ0R94X_CSS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/setupMonaco-CtZ0R94X.css",
+        "category": "webui",
+        "name": "setupMonaco-CtZ0R94X.css"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_SETUPMONACO_FEATURES_BTXSI65E_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/setupMonaco.features-bTxsI65e.js",
+        "category": "webui",
+        "name": "setupMonaco.features-bTxsI65e.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_SL_BTIC91GE_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/sl-BtIc91gE.js",
+        "category": "webui",
+        "name": "sl-BtIc91gE.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_SV_YX_PEKAI_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/sv-yX_pekAi.js",
+        "category": "webui",
+        "name": "sv-yX_pekAi.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_TA_K3XY7E9Z_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/ta-k3Xy7e9Z.js",
+        "category": "webui",
+        "name": "ta-k3Xy7e9Z.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_TR_D52HZHIV_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/tr-D52hzhIv.js",
+        "category": "webui",
+        "name": "tr-D52hzhIv.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_UK_CU9OUR6E_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/uk-Cu9oUr6e.js",
+        "category": "webui",
+        "name": "uk-Cu9oUr6e.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_UV4LMJPEGCAMERA_VX1UIUGL_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/Uv4LMjpegCamera-Vx1UIugL.js",
+        "category": "webui",
+        "name": "Uv4LMjpegCamera-Vx1UIugL.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_VIRTUAL_PWA_REGISTER_D9SLW9QO_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/virtual_pwa-register-D9SlW9QO.js",
+        "category": "webui",
+        "name": "virtual_pwa-register-D9SlW9QO.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_VUE_ECHARTS_CHUNK_C2_VTQTI_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/vue-echarts-chunk-C2_vtQTI.js",
+        "category": "webui",
+        "name": "vue-echarts-chunk-C2_vtQTI.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_WEBRTCCAMERASTREAMERCAMERA_COQJ3OHX_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/WebrtcCamerastreamerCamera-Coqj3Ohx.js",
+        "category": "webui",
+        "name": "WebrtcCamerastreamerCamera-Coqj3Ohx.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_WEBRTCGO2RTCCAMERA_VBZMCB_J_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/WebrtcGo2RtcCamera-VbzmcB_J.js",
+        "category": "webui",
+        "name": "WebrtcGo2RtcCamera-VbzmcB_J.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_WEBRTCMEDIAMTXCAMERA_DM0YQWK0_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/WebrtcMediamtxCamera-Dm0yQWk0.js",
+        "category": "webui",
+        "name": "WebrtcMediamtxCamera-Dm0yQWk0.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_WORKBOX_WINDOW_PROD_ES5_VQZQAGVO_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/workbox-window.prod.es5-vqzQaGvo.js",
+        "category": "webui",
+        "name": "workbox-window.prod.es5-vqzQaGvo.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ZH_CN_DEDNPP_B_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/zh-CN-DedNPp_B.js",
+        "category": "webui",
+        "name": "zh-CN-DedNPp_B.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_ASSETS_ZH_HK_B05HP8MJ_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/assets/zh-HK-B05hP8Mj.js",
+        "category": "webui",
+        "name": "zh-HK-B05hP8Mj.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_MONACOEDITORWORK_CSS_WORKER_BUNDLE_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/monacoeditorwork/css.worker.bundle.js",
+        "category": "webui",
+        "name": "css.worker.bundle.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_MONACOEDITORWORK_EDITOR_WORKER_BUNDLE_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/monacoeditorwork/editor.worker.bundle.js",
+        "category": "webui",
+        "name": "editor.worker.bundle.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_MONACOEDITORWORK_JSON_WORKER_BUNDLE_JS": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/monacoeditorwork/json.worker.bundle.js",
+        "category": "webui",
+        "name": "json.worker.bundle.js"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_ANDROID_CHROME_192X192_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/android-chrome-192x192.png",
+        "category": "misc",
+        "name": "android-chrome-192x192.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_ANDROID_CHROME_512X512_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/android-chrome-512x512.png",
+        "category": "misc",
+        "name": "android-chrome-512x512.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_ANDROID_CHROME_MASKABLE_192X192_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/android-chrome-maskable-192x192.png",
+        "category": "misc",
+        "name": "android-chrome-maskable-192x192.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_ANDROID_CHROME_MASKABLE_512X512_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/android-chrome-maskable-512x512.png",
+        "category": "misc",
+        "name": "android-chrome-maskable-512x512.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_APPLE_TOUCH_ICON_120X120_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/apple-touch-icon-120x120.png",
+        "category": "misc",
+        "name": "apple-touch-icon-120x120.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_APPLE_TOUCH_ICON_152X152_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/apple-touch-icon-152x152.png",
+        "category": "misc",
+        "name": "apple-touch-icon-152x152.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_APPLE_TOUCH_ICON_180X180_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/apple-touch-icon-180x180.png",
+        "category": "misc",
+        "name": "apple-touch-icon-180x180.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_APPLE_TOUCH_ICON_60X60_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/apple-touch-icon-60x60.png",
+        "category": "misc",
+        "name": "apple-touch-icon-60x60.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_APPLE_TOUCH_ICON_76X76_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/apple-touch-icon-76x76.png",
+        "category": "misc",
+        "name": "apple-touch-icon-76x76.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_APPLE_TOUCH_ICON_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/apple-touch-icon.png",
+        "category": "misc",
+        "name": "apple-touch-icon.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_FAVICON_16X16_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/favicon-16x16.png",
+        "category": "misc",
+        "name": "favicon-16x16.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_FAVICON_32X32_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/favicon-32x32.png",
+        "category": "misc",
+        "name": "favicon-32x32.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_FAVICON_ICO": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/favicon.ico",
+        "category": "misc",
+        "name": "favicon.ico"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_MSAPPLICATION_ICON_144X144_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/msapplication-icon-144x144.png",
+        "category": "misc",
+        "name": "msapplication-icon-144x144.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_MSTILE_150X150_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/mstile-150x150.png",
+        "category": "misc",
+        "name": "mstile-150x150.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_SAFARI_PINNED_TAB_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/safari-pinned-tab.svg",
+        "category": "misc",
+        "name": "safari-pinned-tab.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_SHORTCUT_CONFIGURATION_96X96_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/shortcut-configuration-96x96.png",
+        "category": "misc",
+        "name": "shortcut-configuration-96x96.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_ICONS_SHORTCUT_SETTINGS_96X96_PNG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/icons/shortcut-settings-96x96.png",
+        "category": "misc",
+        "name": "shortcut-settings-96x96.png"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_MMU_MMU_3MS_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/mmu/mmu_3MS.svg",
+        "category": "misc",
+        "name": "mmu_3MS.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_MMU_MMU_ANGRYBEAVER_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/mmu/mmu_AngryBeaver.svg",
+        "category": "misc",
+        "name": "mmu_AngryBeaver.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_MMU_MMU_BOXTURTLE_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/mmu/mmu_BoxTurtle.svg",
+        "category": "misc",
+        "name": "mmu_BoxTurtle.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_MMU_MMU_EMU_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/mmu/mmu_EMU.svg",
+        "category": "misc",
+        "name": "mmu_EMU.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_MMU_MMU_ERCF_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/mmu/mmu_ERCF.svg",
+        "category": "misc",
+        "name": "mmu_ERCF.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_MMU_MMU_HAPPYHARE_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/mmu/mmu_HappyHare.svg",
+        "category": "misc",
+        "name": "mmu_HappyHare.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_MMU_MMU_KMS_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/mmu/mmu_KMS.svg",
+        "category": "misc",
+        "name": "mmu_KMS.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_MMU_MMU_MMX_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/mmu/mmu_MMX.svg",
+        "category": "misc",
+        "name": "mmu_MMX.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_MMU_MMU_NIGHTOWL_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/mmu/mmu_NightOwl.svg",
+        "category": "misc",
+        "name": "mmu_NightOwl.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_MMU_MMU_QUATTROBOX_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/mmu/mmu_QuattroBox.svg",
+        "category": "misc",
+        "name": "mmu_QuattroBox.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_MMU_MMU_TRADRACK_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/mmu/mmu_Tradrack.svg",
+        "category": "misc",
+        "name": "mmu_Tradrack.svg"
+      },
+      "PD_MNT_UDISK_PRINTER_DATA_WWW_FLUIDD_IMG_MMU_MMU_VVD_SVG": {
+        "path": "/mnt/UDISK/printer_data/www/Fluidd/img/mmu/mmu_VVD.svg",
+        "category": "misc",
+        "name": "mmu_VVD.svg"
+      }
+    }
+  }
+}

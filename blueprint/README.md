@@ -3,7 +3,7 @@
 This folder contains normalized JSON assets derived from `libk2/` (your dump).
 
 These JSON files are intended to be uploaded to an ESP32 LittleFS image and consumed
-by `DeviceBlueprintLib` using **Key IDs** (`GC_*`, `CMD_*`, `PART_*`, `PATH_*`, `SIG_*`, etc.).
+by `DeviceBlueprintLib` using **Key IDs** (`GC_*`, `CMD_*`, `PART_*`, `PATH_*`, `SIG_*`, `WEB_*`, etc.).
 
 ## Generate / refresh
 
@@ -27,3 +27,5 @@ python tools/run_all.py libk2
 - `MotionConfig.json`
 - `WebHints.json`
 - `McuProtoHints.json`
+- `PrinterData.json`
+- `FileOps.json`

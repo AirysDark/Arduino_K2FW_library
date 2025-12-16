@@ -90,7 +90,13 @@ def main():
 
     if cand:
         source = "/" + cand.relative_to(dump_root).as_posix()
-        buf = cand.read_bytes()[: (512*256)]
+        buf = None
+        # SAFETY: do not read whole multi-GB images into RAM
+        max_read = 512*4096  # 2 MiB
+        with cand.open("rb") as f:
+            buf = f.read(max_read)
+        # legacy slice below kept
+        buf = buf[: (512*256)]
         gpt = parse_gpt(buf)
         if gpt is not None:
             parts = gpt

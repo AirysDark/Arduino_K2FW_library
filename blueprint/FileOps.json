@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "dump_root": "C:\\Users\\AirysDark\\Documents\\GitHub\\Arduino_K2FW_library\\libk2"
+  },
+  "file_ops": {
+    "FILE_M28_STREAM_GCODE": {
+      "type": "m28_stream",
+      "begin": "M28 {remote}",
+      "end": "M29",
+      "verify": [
+        "M20",
+        "M30 {remote}"
+      ],
+      "notes": "Start SD/virtual-SD write with M28, stream lines, finish with M29. Verify with M20/M30 if supported."
+    },
+    "FILE_HTTP_MOONRAKER_UPLOAD": {
+      "type": "http_upload",
+      "endpoint": "/server/files/upload"
+    }
+  },
+  "evidence": {
+    "m28": [
+      "/usr/share/hwdata/usb.ids",
+      "/usr/share/moonraker-env/lib/python3.9/site-packages/certifi/cacert.pem",
+      "/usr/share/moonraker-env/lib/python3.9/site-packages/pip/_vendor/requests/cacert.pem",
+      "/usr/share/moonraker/components/paneldue.py",
+      "/usr/share/klippy-env/lib/python3.9/site-packages/pip/_vendor/requests/cacert.pem",
+      "/usr/share/klipper/docs/Bootloaders.md",
+      "/usr/share/klipper/klippy/extras/virtual_sdcard.py",
+      "/usr/share/klipper/gcodes/GS_01/Spool_holder_Hyper PLA_1H49m.gcode",
+      "/usr/share/klipper/gcodes/K1_Max/scraper-K1 Max_0.4_Hyper PLA_28m.gcode",
+      "/usr/share/klipper/gcodes/K1_Max/Spool_holder_Hyper PLA_1H49m.gcode",
+      "/usr/lib/python3.9/site-packages/pip/_vendor/certifi/cacert.pem",
+      "/upper/usr/lib/python3.9/site-packages/certifi/cacert.pem",
+      "/upper/usr/lib/python3.9/site-packages/pip/_vendor/certifi/cacert.pem",
+      "/rom/usr/share/klipper/docs/Bootloaders.md",
+      "/rom/usr/share/klipper/klippy/extras/virtual_sdcard.py",
+      "/rom/usr/share/klipper/gcodes/GS_01/Spool_holder_Hyper PLA_1H49m.gcode",
+      "/rom/usr/share/klipper/gcodes/K1_Max/scraper-K1 Max_0.4_Hyper PLA_28m.gcode",
+      "/rom/usr/share/klipper/gcodes/K1_Max/Spool_holder_Hyper PLA_1H49m.gcode",
+      "/rom/etc/ssl/certs/ca-certificates.crt",
+      "/rom/etc/ssl/certs/Starfield_Root_Certificate_Authority_-_G2.crt",
+      "/overlay/upper/usr/lib/python3.9/site-packages/certifi/cacert.pem",
+      "/overlay/upper/usr/lib/python3.9/site-packages/pip/_vendor/certifi/cacert.pem",
+      "/mnt/UDISK/printer_data/www/Fluidd/logo_cocoapress.svg",
+      "/mnt/UDISK/printer_data/www/Fluidd/logo_eva.svg",
+      "/mnt/UDISK/printer_data/www/Fluidd/logo_fluidd.svg",
+      "/mnt/UDISK/printer_data/www/Fluidd/logo_hevort.svg",
+      "/mnt/UDISK/printer_data/www/Fluidd/logo_kingroon.svg",
+      "/mnt/UDISK/printer_data/www/Fluidd/logo_peopoly.svg",
+      "/mnt/UDISK/printer_data/www/Fluidd/logo_pfa.svg",
+      "/mnt/UDISK/printer_data/www/Fluidd/logo_z-bolt.svg",
+      "/mnt/UDISK/printer_data/www/Mainsail/assets/index-DeuWg9LT.js",
+      "/mnt/UDISK/printer_data/www/Mainsail/img/themes/sidebarLogo-voron.svg",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/index-Czbluz8b.css",
+      "/mnt/UDISK/printer_data/www/Fluidd/img/mmu/mmu_3MS.svg",
+      "/mnt/UDISK/printer_data/www/Fluidd/img/mmu/mmu_MMX.svg",
+      "/etc/ssl/certs/ca-certificates.crt",
+      "/etc/ssl/certs/Starfield_Root_Certificate_Authority_-_G2.crt"
+    ],
+    "http": [
+      "/usr/share/moonraker/app.py",
+      "/usr/share/fluidd/assets/index-DAJGCJUz.js",
+      "/upper/usr/share/moonraker-bridge/moonraker_bridge.py",
+      "/overlay/upper/usr/share/moonraker-bridge/moonraker_bridge.py",
+      "/mnt/UDISK/printer_data/logs/moonraker.log",
+      "/mnt/UDISK/printer_data/www/Fluidd/assets/index-BGk7wtgE.js"
+    ]
+  }
+}
