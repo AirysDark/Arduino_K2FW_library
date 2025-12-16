@@ -1,0 +1,18 @@
+# Doxyfile for DeviceBlueprintLib
+PROJECT_NAME           = "DeviceBlueprintLib"
+PROJECT_BRIEF          = "Static blueprint DB + safe ops for devices"
+OUTPUT_DIRECTORY       = docs_out
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+QUIET                 = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_NO_PARAMDOC       = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+INPUT                  = DeviceBlueprintLib/src
+RECURSIVE              = YES
+FILE_PATTERNS          = *.h *.hpp *.c *.cpp
+USE_MDFILE_AS_MAINPAGE = README.md
+INLINE_SOURCES         = NO
+SOURCE_BROWSER         = YES
+JAVADOC_AUTOBRIEF      = YES
