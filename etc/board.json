@@ -1,0 +1,12 @@
+{
+	"model": {
+		"id": "allwinner,t113_i",
+		"name": "sun8iw20"
+	},
+	"network": {
+		"lan": {
+			"device": "eth0",
+			"protocol": "static"
+		}
+	}
+}
