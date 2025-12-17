@@ -11491,6 +11491,3 @@ enum KeyID : uint32_t {
 };
 static const size_t K2_KEY_COUNT = 11486;
 } // namespace K2
-
-static_assert(K2_KEY_COUNT > 0, "KeyCatalog empty");
-

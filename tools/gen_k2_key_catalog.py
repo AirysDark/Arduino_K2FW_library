@@ -3,6 +3,11 @@ import sys, json
 from pathlib import Path
 from _gen_common import safe_cpp, safe_ident, write_header, load_json
 
+def emit_count_from_array(array_name: str) -> str:
+    # Prefer sizeof-based counts to avoid ordering/scope issues.
+    return f"inline constexpr size_t {array_name.upper()}_COUNT = sizeof({array_name}) / sizeof({array_name}[0]);\n"
+
+
 def collect_keys_from_json(j):
     keys = set()
     if isinstance(j, dict):

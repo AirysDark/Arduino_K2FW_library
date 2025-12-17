@@ -3,6 +3,11 @@ import sys
 from pathlib import Path
 import subprocess
 
+def emit_count_from_array(array_name: str) -> str:
+    # Prefer sizeof-based counts to avoid ordering/scope issues.
+    return f"inline constexpr size_t {array_name.upper()}_COUNT = sizeof({array_name}) / sizeof({array_name}[0]);\n"
+
+
 def run(cmd):
     print(">>", " ".join(str(x) for x in cmd))
     subprocess.check_call([str(x) for x in cmd])

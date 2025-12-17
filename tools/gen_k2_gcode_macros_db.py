@@ -3,6 +3,11 @@ import sys
 from pathlib import Path
 from _gen_common import load_json, safe_cpp, safe_ident, write_header
 
+def emit_count_from_array(array_name: str) -> str:
+    # Prefer sizeof-based counts to avoid ordering/scope issues.
+    return f"inline constexpr size_t {array_name.upper()}_COUNT = sizeof({array_name}) / sizeof({array_name}[0]);\n"
+
+
 def iter_macros(obj):
     # Accept:
     # 1) {"macros": {"GC_X": {"gcode":"...", "desc":"..."}}}
@@ -54,8 +59,8 @@ def main():
     lines.append("#include <Arduino.h>")
     lines.append("namespace K2 {")
     lines.append("struct MacroItem { const char* key; const char* gcode; const char* desc; };")
-    lines.append(f"static const size_t K2_MACRO_COUNT = {len(keys)};")
-    lines.append("static const MacroItem K2_MACROS[K2_MACRO_COUNT] = {")
+    lines.append(f"static const size_t K2_GC_COUNT = {len(keys)};")
+    lines.append("static const MacroItem K2_MACROS[K2_GC_COUNT] = {")
     for k in keys:
         g,d = items[k]
         lines.append(f'  {{ "{safe_cpp(k)}", "{safe_cpp(g)}", "{safe_cpp(d)}" }},')

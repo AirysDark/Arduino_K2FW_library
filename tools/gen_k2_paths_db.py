@@ -3,6 +3,11 @@ import sys
 from pathlib import Path
 from _gen_common import load_json, safe_cpp, safe_ident, write_header
 
+def emit_count_from_array(array_name: str) -> str:
+    # Prefer sizeof-based counts to avoid ordering/scope issues.
+    return f"inline constexpr size_t {array_name.upper()}_COUNT = sizeof({array_name}) / sizeof({array_name}[0]);\n"
+
+
 def iter_paths(obj):
     # Accept:
     # 1) {"paths": {"PATH_X": {... or string}}}

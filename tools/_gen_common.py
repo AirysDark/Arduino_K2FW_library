@@ -2,6 +2,11 @@
 import json, re
 from pathlib import Path
 
+def emit_count_from_array(array_name: str) -> str:
+    # Prefer sizeof-based counts to avoid ordering/scope issues.
+    return f"inline constexpr size_t {array_name.upper()}_COUNT = sizeof({array_name}) / sizeof({array_name}[0]);\n"
+
+
 def load_json(p: Path):
     return json.loads(p.read_text(encoding="utf-8"))
 

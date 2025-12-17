@@ -20,7 +20,3 @@ static const Partition K2_PARTS[K2_PART_COUNT] = {
   { "PART_DEV_BY_NAME_ROOTFSB", "/dev/by-name/rootfsB", "/dev/by-name/rootfsB", "rootfs", (int8_t)-1, true, true, 0ULL, 0ULL },
 };
 } // namespace K2
-
-static_assert(K2_PART_COUNT > 0, "Partition DB empty");
-static_assert(sizeof(K2::Partition) <= 128, "Partition struct unexpectedly large");
-

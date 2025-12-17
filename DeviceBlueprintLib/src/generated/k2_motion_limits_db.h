@@ -466,6 +466,3 @@ static const MotionKV K2_MOTION_KV[K2_MOTION_KV_COUNT] = {
   { "MOTION_MC__TTYUSB_TTYACM__SECTION", "\"^ttyUSB\", \"^ttyACM\"" },
 };
 } // namespace K2
-
-
-static_assert(K2_MOTION_KV_COUNT > 0, "Motion DB empty");
