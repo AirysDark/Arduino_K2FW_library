@@ -19,7 +19,9 @@
 - [Documentation Index](#documentation-index)
 
 
----
+-----------
+NOTE v1.0.0 and v1.1.0 where broken v1.1.1 is fix
+-----------
 
 ## Overview
 
