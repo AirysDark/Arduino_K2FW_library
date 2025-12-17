@@ -24,13 +24,13 @@ NOTE v1.0.0 and v1.1.0 where broken v1.1.1 is fix
 -----------
 
 rememeber to add
-``
+```bash
 board_build.filesystem = littlefs
 lib_ldf_mode = chain+
 
 lib_deps =
   bblanchon/ArduinoJson @ ^7.0.4
-``
+```
 ## Overview
 
 This repository builds a hardware / firmware blueprint database from a real device firmware dump
